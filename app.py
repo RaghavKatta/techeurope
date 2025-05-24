@@ -1,8 +1,8 @@
 import os
 import requests  # Make sure this import is at the top
-from flask import Flask, render_template, request, redirect, url_for, send_from_directory, jsonify
+from flask import Flask, render_template, request, redirect, url_for, send_from_directory, jsonify, session
 from werkzeug.utils import secure_filename
-
+import openai
 from PIL import Image
 import torch
 from transformers import BlipProcessor, BlipForConditionalGeneration
@@ -205,40 +205,129 @@ def recommendations(entry_id):
 @app.route('/recommendations')
 def latest_recommendations():
     if not entries:
-        return render_template('recommendations.html', entry=None, recommendations="No logs yet!")
+        return render_template(
+            'recommendations.html',
+            entry=None,
+            recommendations="No logs yet!",
+            stores=[]
+        )
 
     latest_entry = entries[-1]
-    
-    # Construct prompt for OpenAI
-    prompt = f"""
+
+    # —— 1) Food recommendations via GPT-3.5 —— #
+    prompt_nutri = f"""
     Based on this person's profile and daily log, suggest healthy food recommendations:
-    
+
     Profile:
-    - Age: {profile['age'] if profile else 'Not provided'}
-    - Diet: {profile['diet'] if profile else 'Not provided'}
-    - Medical Conditions: {profile['conditions'] if profile else 'None'}
-    - Allergies: {profile['allergies'] if profile else 'None'}
-    
+    - Age: {profile.get('age', 'Not provided')}
+    - Diet: {profile.get('diet', 'Not provided')}
+    - Medical Conditions: {profile.get('conditions', 'None')}
+    - Allergies: {profile.get('allergies', 'None')}
+
     Current Status:
     - Energy Level: {latest_entry['energy']}
     - Symptoms: {latest_entry['symptoms']}
     - Mood: {latest_entry['mood']}
-    
+
     Please provide specific food recommendations considering their dietary restrictions and current symptoms.
     """
-    
-    # Call OpenAI API
-    response = client.chat.completions.create(
+    resp1 = client.chat.completions.create(
         model="gpt-3.5-turbo",
         messages=[
             {"role": "system", "content": "You are a nutritionist providing specific food recommendations."},
-            {"role": "user", "content": prompt}
+            {"role": "user",   "content": prompt_nutri}
         ]
     )
-    
-    recommendations = response.choices[0].message.content
-    
-    return render_template('recommendations.html', entry=latest_entry, recommendations=recommendations)
+    recommendations = resp1.choices[0].message.content.strip()
+
+    # —— 2) Nearby grocery stores via GPT-4.1 —— #
+    lat = session.get('latitude')
+    lon = session.get('longitude')
+    loc_str = f"{lat}, {lon}" if lat and lon else "unknown location"
+    prompt_stores = f"""
+    Based on the user's location ({loc_str}), list nearby grocery stores in Paris.
+    Return ONLY a Python list assigned to a variable called stores.
+    Each dict must have these keys:
+      name, address, price, healthiness_score
+
+    Example:
+    stores = [
+      {{'name': 'Franprix', 'address': '27 Rue…', 'price': '€€', 'healthiness_score': 60}},
+      …
+    ]
+    """
+    resp2 = client.chat.completions.create(
+        model="gpt-4.1",
+        messages=[
+            {"role": "system", "content": "You are a location-based nutrition assistant."},
+            {"role": "user",   "content": prompt_stores}
+        ],
+        temperature=0
+    )
+    text2 = resp2.choices[0].message.content.strip()
+    # Safely exec the list literal
+    namespace = {}
+    try:
+        exec(text2, {}, namespace)
+        stores = namespace.get('stores', [])
+    except Exception:
+        stores = []
+
+    # —— Render both into the template —— #
+    return render_template(
+        'recommendations.html',
+        entry=latest_entry,
+        recommendations=recommendations,
+        stores=stores
+    )
+
+
+@app.route('/recommendations/location', methods=['POST'])
+def save_location():
+    data = request.get_json()
+    print("📍 Received location data:", data, flush=True)
+    session['latitude'] = data.get('latitude')
+    session['longitude'] = data.get('longitude')
+    return '', 204          # empty body, HTTP 204 No Content
+
+@app.route('/locations', methods=['GET'])
+def get_nearby_stores():
+    # —— 2) Nearby grocery stores via GPT-4.1 —— #
+    lat = session.get('latitude')
+    lon = session.get('longitude')
+    loc_str = f"{lat}, {lon}" if lat and lon else "unknown location"
+    prompt_stores = f"""
+Based on the user's location ({loc_str}), list nearby grocery stores in Paris.
+Return ONLY a Python list assigned to a variable called stores.
+Each dict must have these keys:
+  name, address, price, healthiness_score
+
+Example:
+stores = [
+  {{'name': 'Franprix', 'address': '27 Rue…', 'price': '€€', 'healthiness_score': 60}},
+]
+"""
+
+    resp = client.chat.completions.create(
+        model="gpt-4.1",
+        messages=[
+            {"role": "system", "content": "You are a location-based nutrition assistant."},
+            {"role": "user",   "content": prompt_stores}
+        ],
+        temperature=0
+    )
+    text = resp.choices[0].message.content.strip()
+    # Safely exec the list literal
+    namespace = {}
+    try:
+        exec(text, {}, namespace)
+        stores = namespace.get('stores', [])
+    except Exception:
+        stores = []
+
+    print("🏬 Parsed stores:", stores, flush=True)
+    return jsonify(stores)
+
 
 if __name__ == '__main__':
     # debug=True ensures you see the print(...) output
