@@ -5,17 +5,24 @@
   <h1>Submission Received</h1>
 
   <h2>Profile</h2>
-  <p>Age: {{ entry.age }}, Sex: {{ entry.sex }}, Diet: {{ entry.diet }}</p>
-  <p>Conditions: {{ entry.conditions }}</p>
-  <p>Allergies: {{ entry.allergies }}</p>
-  <p>Medications: {{ entry.medications }}</p>
-  <p>Stress: {{ entry.stress }}, Sleep: {{ entry.sleep }}</p>
+
+  {% if profile %}
+      <p>Age: {{ profile['age'] }}</p> 
+      <p>Sex: {{ profile['sex'] }}</p> 
+      <p> Diet: {{ profile['diet'] }}</p> 
+       <p>Conditions: {{ profile['conditions'] or 'None' }}</p>
+       <p>Allergies: {{ profile['allergies'] or 'None' }}</p>
+       <p>Medications: {{ profile['medications'] or 'None' }}</p>
+  {% else %}
+    <p><em>No profile data—please <a href="{{ url_for('profile_page') }}">fill it out</a>.</em></p>
+  {% endif %}
 
   <h2>Daily Log</h2>
   <p>Meals: {{ entry.food }}</p>
   <p>Pain: {{ entry.pain }}</p>
   <p>Symptoms: {{ entry.symptoms }}</p>
-  <p>Mood: {{ entry.mood }}, Energy: {{ entry.energy }}</p>
+  <p>Mood: {{ entry.mood }}</p>
+  <p> Energy: {{ entry.energy }}</p>
   <p>Supplements: {{ entry.supplements }}</p>
 
   {% if entry.voice %}
@@ -31,7 +38,10 @@
     <p>🧠 Caption: “<strong>{{ entry.caption }}</strong>”</p>
   {% endif %}
 
-  <p><a href="/">Submit another</a></p>
+  <p>
+    <a href="/">Submit another</a> | 
+    <a href="{{ url_for('recommendations', entry_id=entry.id) }}">View Recommendations</a>
+  </p>
 </body>
 </html>
 

@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Recommendations</title>
+</head>
+<body>
+  <h1>Recommendations for {{ entry and entry.id or 'N/A' }}</h1>
+
+  <nav>
+    <a href="/">Meal Logger</a> | <a href="/profile">Profile</a> | <a href="/recommendations">Recommendations</a>
+  </nav>
+
+  {% if recommendations %}
+    <pre>{{ recommendations }}</pre>
+  {% else %}
+    <p>No recommendations available yet.</p>
+  {% endif %}
+
+</body>
+
+
+</html>
+
