@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+<head><meta charset="utf-8"><title>Thanks!</title></head>
+<body>
+  <h1>Submission Received</h1>
+
+  <h2>Profile</h2>
+  <p>Age: {{ entry.age }}, Sex: {{ entry.sex }}, Diet: {{ entry.diet }}</p>
+  <p>Conditions: {{ entry.conditions }}</p>
+  <p>Allergies: {{ entry.allergies }}</p>
+  <p>Medications: {{ entry.medications }}</p>
+  <p>Stress: {{ entry.stress }}, Sleep: {{ entry.sleep }}</p>
+
+  <h2>Daily Log</h2>
+  <p>Meals: {{ entry.food }}</p>
+  <p>Pain: {{ entry.pain }}</p>
+  <p>Symptoms: {{ entry.symptoms }}</p>
+  <p>Mood: {{ entry.mood }}, Energy: {{ entry.energy }}</p>
+  <p>Supplements: {{ entry.supplements }}</p>
+
+  {% if entry.voice %}
+    <p>🎤 Voice note: “{{ entry.voice }}”</p>
+  {% endif %}
+
+  {% if entry.image %}
+    <p>📷 Photo:</p>
+    <img src="{{ url_for('uploaded_file', filename=entry.image) }}" width="200"><br>
+  {% endif %}
+
+  {% if entry.caption %}
+    <p>🧠 Caption: “<strong>{{ entry.caption }}</strong>”</p>
+  {% endif %}
+
+  <p><a href="/">Submit another</a></p>
+</body>
+</html>
+

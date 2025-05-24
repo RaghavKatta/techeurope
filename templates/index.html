@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Food & Pain Tracker</title>
+</head>
+<body>
+  <h1>Food & Pain Tracker</h1>
+  <nav>
+    <a href="/">Meal Logger</a> | <a href="/profile">Profile</a>
+  </nav>
+
+  <form method="POST" enctype="multipart/form-data">
+    <div>
+      <label>Meals (comma-separated):</label>
+      <input type="text" name="food" required>
+    </div>
+    <div>
+      <label for="pain">Pain (1-10):</label>
+      <input type="number" name="pain" min="1" max="10" required>
+    </div>
+    <div>
+      <label>Symptoms:</label>
+      <input type="text" name="symptoms">
+    </div>
+    <div>
+      <label>Mood:</label>
+      <input type="text" name="mood">
+    </div>
+    <div>
+      <label>Energy (1-5):</label>
+      <input type="number" name="energy" min="1" max="5">
+    </div>
+    <div>
+      <label>Supplements taken:</label>
+      <input type="text" name="supplements" placeholder="comma-separated">
+    </div>
+    
+    <!-- Voice input -->
+    <div>
+      <button type="button" id="record">🎤 Record Voice Note</button>
+      <input type="hidden" id="voice_input" name="voice_input">
+      <p id="voice_status"></p>
+    </div>
+
+    <!-- Image upload -->
+    <div>
+      <label for="image">Upload meal photo:</label>
+      <input type="file" id="image" name="image" accept="image/*">
+    </div>
+
+    <button type="submit">Submit</button>
+  </form>
+
+  <!-- ...existing entries display code... -->
+  <!-- ...existing voice recognition script... -->
+</body>
+</html>

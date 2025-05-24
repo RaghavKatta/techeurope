@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Health Profile</title>
+</head>
+<body>
+  <h1>Health Profile</h1>
+  <nav>
+    <a href="/">Meal Logger</a> | <a href="/profile">Profile</a>
+  </nav>
+
+  <form method="POST">
+    <div>
+      <label>Age:</label>
+      <input type="number" name="age" min="0" required value="{{ profile.age if profile }}">
+    </div>
+    <div>
+      <label>Sex:</label>
+      <select name="sex">
+        <option value="female" {% if profile and profile.sex == 'female' %}selected{% endif %}>Female</option>
+        <option value="male" {% if profile and profile.sex == 'male' %}selected{% endif %}>Male</option>
+        <option value="other" {% if profile and profile.sex == 'other' %}selected{% endif %}>Other</option>
+      </select>
+    </div>
+    <div>
+      <label>Diet type:</label>
+      <input type="text" name="diet" placeholder="e.g. vegetarian" required value="{{ profile.diet if profile }}">
+    </div>
+    <div>
+      <label>Health conditions:</label>
+      <input type="text" name="conditions" placeholder="comma-separated" value="{{ profile.conditions if profile }}">
+    </div>
+    <div>
+      <label>Allergies:</label>
+      <input type="text" name="allergies" placeholder="comma-separated" value="{{ profile.allergies if profile }}">
+    </div>
+    <div>
+      <label>Medications:</label>
+      <input type="text" name="medications" placeholder="comma-separated" value="{{ profile.medications if profile }}">
+    </div>
+    <button type="submit">Save Profile</button>
+  </form>
+</body>
+</html>
