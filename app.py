@@ -9,6 +9,7 @@ from transformers import BlipProcessor, BlipForConditionalGeneration
 from openai import OpenAI
 import json
 from dotenv import load_dotenv
+from simple_openai_helper import analyze_food_from_caption
 load_dotenv()
 
 # ——— Flask setup ———
@@ -149,6 +150,14 @@ def index():
             entry['caption'] = analyze_image(save_path)
 
         entries.append(entry)
+
+        # Simple OpenAI food analysis
+        last_entry = entries[-1]
+        if last_entry.get('caption'):
+            print(f"🤖 Analyzing food from caption: {last_entry['caption']}")
+            food_analysis = analyze_food_from_caption(last_entry['caption'])
+            last_entry['food_analysis'] = food_analysis
+            print(f"✅ Food analysis complete: {food_analysis}")
 
         # Pass the already‐set profile into the thanks page
         return render_template(
