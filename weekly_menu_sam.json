@@ -1,0 +1,2026 @@
+{
+  "person": "sam",
+  "optimization_goal": "minimize_inflammation",
+  "weekly_menu": {
+    "Monday": {
+      "Breakfast": {
+        "recipe": {
+          "id": 6,
+          "title": "Classic Pancakes",
+          "cuisine": "American",
+          "prep_time_minutes": 10,
+          "cook_time_minutes": 15,
+          "total_time_minutes": 25,
+          "servings": 4,
+          "difficulty": "Easy",
+          "category": "Breakfast",
+          "meal_type": [
+            "Breakfast"
+          ],
+          "ingredients": [
+            {
+              "name": "all-purpose flour",
+              "quantity": 200,
+              "unit": "grams",
+              "notes": "approximately 1.5 cups"
+            },
+            {
+              "name": "sugar",
+              "quantity": 25,
+              "unit": "grams",
+              "notes": "2 tablespoons"
+            },
+            {
+              "name": "baking powder",
+              "quantity": 8,
+              "unit": "grams",
+              "notes": "2 teaspoons"
+            },
+            {
+              "name": "salt",
+              "quantity": 3,
+              "unit": "grams",
+              "notes": "1/2 teaspoon"
+            },
+            {
+              "name": "milk",
+              "quantity": 300,
+              "unit": "ml",
+              "notes": "whole milk"
+            },
+            {
+              "name": "eggs",
+              "quantity": 2,
+              "unit": "pieces",
+              "notes": "approximately 100g, large"
+            },
+            {
+              "name": "butter",
+              "quantity": 60,
+              "unit": "grams",
+              "notes": "melted, plus extra for cooking"
+            },
+            {
+              "name": "vanilla extract",
+              "quantity": 5,
+              "unit": "ml",
+              "notes": "1 teaspoon"
+            },
+            {
+              "name": "maple syrup",
+              "quantity": 120,
+              "unit": "ml",
+              "notes": "for serving"
+            }
+          ],
+          "instructions": [
+            "In a large bowl, whisk together flour, sugar, baking powder, and salt.",
+            "In another bowl, whisk together milk, eggs, melted butter, and vanilla extract.",
+            "Pour the wet ingredients into the dry ingredients and stir until just combined. Don't overmix; lumps are okay.",
+            "Let the batter rest for 5 minutes.",
+            "Heat a non-stick pan or griddle over medium heat and add a little butter.",
+            "Pour 1/4 cup of batter for each pancake onto the hot pan.",
+            "Cook until bubbles form on the surface and edges look set (about 2-3 minutes).",
+            "Flip and cook for another 1-2 minutes until golden brown.",
+            "Repeat with remaining batter, adding more butter to the pan as needed.",
+            "Serve hot with maple syrup and additional butter."
+          ]
+        },
+        "inflammation_score": 0.062,
+        "prep_time": 10,
+        "total_time": 25,
+        "servings": 4
+      },
+      "Lunch": {
+        "recipe": {
+          "id": 10,
+          "title": "Chicken Noodle Soup",
+          "cuisine": "American",
+          "prep_time_minutes": 20,
+          "cook_time_minutes": 45,
+          "total_time_minutes": 65,
+          "servings": 6,
+          "difficulty": "Easy",
+          "category": "Soup",
+          "meal_type": [
+            "Lunch",
+            "Dinner"
+          ],
+          "ingredients": [
+            {
+              "name": "chicken breast",
+              "quantity": 400,
+              "unit": "grams",
+              "notes": "boneless, skinless"
+            },
+            {
+              "name": "egg noodles",
+              "quantity": 200,
+              "unit": "grams",
+              "notes": "wide noodles"
+            },
+            {
+              "name": "carrots",
+              "quantity": 150,
+              "unit": "grams",
+              "notes": "sliced"
+            },
+            {
+              "name": "celery",
+              "quantity": 100,
+              "unit": "grams",
+              "notes": "chopped"
+            },
+            {
+              "name": "onion",
+              "quantity": 150,
+              "unit": "grams",
+              "notes": "diced"
+            },
+            {
+              "name": "garlic",
+              "quantity": 10,
+              "unit": "grams",
+              "notes": "minced"
+            },
+            {
+              "name": "chicken broth",
+              "quantity": 1500,
+              "unit": "ml",
+              "notes": "low sodium"
+            },
+            {
+              "name": "bay leaves",
+              "quantity": 2,
+              "unit": "pieces"
+            },
+            {
+              "name": "dried thyme",
+              "quantity": 3,
+              "unit": "grams",
+              "notes": "1 teaspoon"
+            },
+            {
+              "name": "olive oil",
+              "quantity": 30,
+              "unit": "ml"
+            },
+            {
+              "name": "salt",
+              "quantity": 8,
+              "unit": "grams"
+            },
+            {
+              "name": "black pepper",
+              "quantity": 3,
+              "unit": "grams"
+            },
+            {
+              "name": "fresh parsley",
+              "quantity": 15,
+              "unit": "grams",
+              "notes": "chopped"
+            }
+          ],
+          "instructions": [
+            "Heat olive oil in a large pot over medium heat.",
+            "Add diced onion, carrots, and celery. Cook until softened (about 6 minutes).",
+            "Add minced garlic and cook for 1 minute.",
+            "Add chicken broth, bay leaves, thyme, salt, and pepper. Bring to a boil.",
+            "Add chicken breast and reduce heat to simmer. Cook for 20 minutes.",
+            "Remove chicken, shred with two forks, and set aside.",
+            "Bring soup back to a boil and add egg noodles.",
+            "Cook noodles according to package directions until tender.",
+            "Return shredded chicken to the pot and simmer for 5 minutes.",
+            "Remove bay leaves, taste and adjust seasoning.",
+            "Garnish with fresh parsley before serving."
+          ]
+        },
+        "inflammation_score": -1.568,
+        "prep_time": 20,
+        "total_time": 65,
+        "servings": 6
+      },
+      "Dinner": {
+        "recipe": {
+          "id": 1,
+          "title": "Spaghetti Bolognese",
+          "cuisine": "Italian",
+          "prep_time_minutes": 20,
+          "cook_time_minutes": 90,
+          "total_time_minutes": 110,
+          "servings": 4,
+          "difficulty": "Medium",
+          "category": "Main Course",
+          "meal_type": [
+            "Lunch",
+            "Dinner"
+          ],
+          "ingredients": [
+            {
+              "name": "spaghetti",
+              "quantity": 400,
+              "unit": "grams",
+              "notes": "dried pasta"
+            },
+            {
+              "name": "ground beef",
+              "quantity": 500,
+              "unit": "grams",
+              "notes": "lean ground beef"
+            },
+            {
+              "name": "onion",
+              "quantity": 150,
+              "unit": "grams",
+              "notes": "approximately 1 large onion, diced"
+            },
+            {
+              "name": "carrot",
+              "quantity": 100,
+              "unit": "grams",
+              "notes": "approximately 1 large carrot, diced"
+            },
+            {
+              "name": "celery",
+              "quantity": 80,
+              "unit": "grams",
+              "notes": "approximately 2 stalks, diced"
+            },
+            {
+              "name": "garlic",
+              "quantity": 15,
+              "unit": "grams",
+              "notes": "approximately 3 cloves, minced"
+            },
+            {
+              "name": "canned tomatoes",
+              "quantity": 400,
+              "unit": "grams",
+              "notes": "crushed or diced"
+            },
+            {
+              "name": "tomato paste",
+              "quantity": 30,
+              "unit": "grams",
+              "notes": "approximately 2 tablespoons"
+            },
+            {
+              "name": "red wine",
+              "quantity": 125,
+              "unit": "ml",
+              "notes": "dry red wine"
+            },
+            {
+              "name": "beef stock",
+              "quantity": 250,
+              "unit": "ml"
+            },
+            {
+              "name": "olive oil",
+              "quantity": 30,
+              "unit": "ml",
+              "notes": "extra virgin"
+            },
+            {
+              "name": "salt",
+              "quantity": 10,
+              "unit": "grams"
+            },
+            {
+              "name": "black pepper",
+              "quantity": 2,
+              "unit": "grams",
+              "notes": "freshly ground"
+            },
+            {
+              "name": "parmesan cheese",
+              "quantity": 50,
+              "unit": "grams",
+              "notes": "grated, for serving"
+            },
+            {
+              "name": "fresh basil",
+              "quantity": 10,
+              "unit": "grams",
+              "notes": "chopped"
+            }
+          ],
+          "instructions": [
+            "Heat olive oil in a large heavy-bottomed pot over medium heat.",
+            "Add diced onion, carrot, and celery. Cook for 8-10 minutes until softened.",
+            "Add minced garlic and cook for 1 minute until fragrant.",
+            "Add ground beef and cook, breaking it up with a spoon, until browned (about 8 minutes).",
+            "Stir in tomato paste and cook for 2 minutes.",
+            "Pour in red wine and let it simmer until mostly evaporated (about 5 minutes).",
+            "Add canned tomatoes, beef stock, salt, and pepper. Bring to a boil.",
+            "Reduce heat to low and simmer for 1-1.5 hours, stirring occasionally.",
+            "Meanwhile, cook spaghetti according to package directions until al dente.",
+            "Drain pasta and serve topped with Bolognese sauce.",
+            "Garnish with fresh basil and grated Parmesan cheese."
+          ]
+        },
+        "inflammation_score": -0.019,
+        "prep_time": 20,
+        "total_time": 110,
+        "servings": 4
+      }
+    },
+    "Tuesday": {
+      "Breakfast": {
+        "recipe": {
+          "id": 9,
+          "title": "Chocolate Chip Cookies",
+          "cuisine": "American",
+          "prep_time_minutes": 15,
+          "cook_time_minutes": 12,
+          "total_time_minutes": 27,
+          "servings": 24,
+          "difficulty": "Easy",
+          "category": "Dessert",
+          "meal_type": [
+            "Dessert"
+          ],
+          "ingredients": [
+            {
+              "name": "all-purpose flour",
+              "quantity": 280,
+              "unit": "grams",
+              "notes": "approximately 2.25 cups"
+            },
+            {
+              "name": "butter",
+              "quantity": 230,
+              "unit": "grams",
+              "notes": "softened"
+            },
+            {
+              "name": "brown sugar",
+              "quantity": 150,
+              "unit": "grams",
+              "notes": "packed"
+            },
+            {
+              "name": "granulated sugar",
+              "quantity": 100,
+              "unit": "grams"
+            },
+            {
+              "name": "eggs",
+              "quantity": 2,
+              "unit": "pieces",
+              "notes": "approximately 100g, large"
+            },
+            {
+              "name": "vanilla extract",
+              "quantity": 10,
+              "unit": "ml",
+              "notes": "2 teaspoons"
+            },
+            {
+              "name": "baking soda",
+              "quantity": 5,
+              "unit": "grams",
+              "notes": "1 teaspoon"
+            },
+            {
+              "name": "salt",
+              "quantity": 5,
+              "unit": "grams",
+              "notes": "1 teaspoon"
+            },
+            {
+              "name": "chocolate chips",
+              "quantity": 200,
+              "unit": "grams",
+              "notes": "semi-sweet"
+            }
+          ],
+          "instructions": [
+            "Preheat oven to 190°C (375°F).",
+            "In a bowl, cream together softened butter, brown sugar, and granulated sugar until light and fluffy (about 3 minutes).",
+            "Beat in eggs one at a time, then add vanilla extract.",
+            "In a separate bowl, whisk together flour, baking soda, and salt.",
+            "Gradually mix the dry ingredients into the butter mixture until just combined.",
+            "Stir in chocolate chips.",
+            "Drop rounded tablespoons of dough onto ungreased baking sheets, spacing 2 inches apart.",
+            "Bake for 9-11 minutes until edges are golden brown but centers still look slightly underbaked.",
+            "Cool on baking sheet for 5 minutes before transferring to a wire rack.",
+            "Store in an airtight container for up to 1 week."
+          ]
+        },
+        "inflammation_score": -0.01,
+        "prep_time": 15,
+        "total_time": 27,
+        "servings": 24
+      },
+      "Lunch": {
+        "recipe": {
+          "id": 8,
+          "title": "Caesar Salad",
+          "cuisine": "American",
+          "prep_time_minutes": 20,
+          "cook_time_minutes": 0,
+          "total_time_minutes": 20,
+          "servings": 4,
+          "difficulty": "Easy",
+          "category": "Salad",
+          "meal_type": [
+            "Lunch",
+            "Dinner"
+          ],
+          "ingredients": [
+            {
+              "name": "romaine lettuce",
+              "quantity": 300,
+              "unit": "grams",
+              "notes": "2 large heads, chopped"
+            },
+            {
+              "name": "parmesan cheese",
+              "quantity": 100,
+              "unit": "grams",
+              "notes": "freshly grated"
+            },
+            {
+              "name": "bread",
+              "quantity": 100,
+              "unit": "grams",
+              "notes": "day-old, cubed for croutons"
+            },
+            {
+              "name": "mayonnaise",
+              "quantity": 80,
+              "unit": "ml"
+            },
+            {
+              "name": "lemon juice",
+              "quantity": 30,
+              "unit": "ml",
+              "notes": "fresh"
+            },
+            {
+              "name": "worcestershire sauce",
+              "quantity": 10,
+              "unit": "ml",
+              "notes": "2 teaspoons"
+            },
+            {
+              "name": "garlic",
+              "quantity": 8,
+              "unit": "grams",
+              "notes": "2 cloves, minced"
+            },
+            {
+              "name": "anchovy paste",
+              "quantity": 5,
+              "unit": "grams",
+              "notes": "1 teaspoon, optional"
+            },
+            {
+              "name": "olive oil",
+              "quantity": 45,
+              "unit": "ml",
+              "notes": "3 tablespoons"
+            },
+            {
+              "name": "salt",
+              "quantity": 3,
+              "unit": "grams"
+            },
+            {
+              "name": "black pepper",
+              "quantity": 2,
+              "unit": "grams",
+              "notes": "freshly ground"
+            }
+          ],
+          "instructions": [
+            "Heat 2 tablespoons olive oil in a large skillet over medium heat.",
+            "Add bread cubes and cook, stirring frequently, until golden brown (about 5 minutes). Set aside.",
+            "In a small bowl, whisk together mayonnaise, lemon juice, Worcestershire sauce, minced garlic, and anchovy paste if using.",
+            "Gradually whisk in remaining olive oil until smooth.",
+            "Season dressing with salt and pepper to taste.",
+            "Place chopped romaine lettuce in a large bowl.",
+            "Add the dressing and toss to coat evenly.",
+            "Add half the grated Parmesan cheese and toss again.",
+            "Top with croutons and remaining Parmesan cheese.",
+            "Serve immediately."
+          ]
+        },
+        "inflammation_score": 0.089,
+        "prep_time": 20,
+        "total_time": 20,
+        "servings": 4
+      },
+      "Dinner": {
+        "recipe": {
+          "id": 7,
+          "title": "Beef Tacos",
+          "cuisine": "Mexican",
+          "prep_time_minutes": 15,
+          "cook_time_minutes": 20,
+          "total_time_minutes": 35,
+          "servings": 4,
+          "difficulty": "Easy",
+          "category": "Main Course",
+          "meal_type": [
+            "Lunch",
+            "Dinner"
+          ],
+          "ingredients": [
+            {
+              "name": "ground beef",
+              "quantity": 500,
+              "unit": "grams",
+              "notes": "lean ground beef"
+            },
+            {
+              "name": "taco shells",
+              "quantity": 8,
+              "unit": "pieces",
+              "notes": "hard or soft tortillas"
+            },
+            {
+              "name": "onion",
+              "quantity": 150,
+              "unit": "grams",
+              "notes": "approximately 1 medium onion, diced"
+            },
+            {
+              "name": "garlic",
+              "quantity": 10,
+              "unit": "grams",
+              "notes": "2 cloves, minced"
+            },
+            {
+              "name": "chili powder",
+              "quantity": 8,
+              "unit": "grams",
+              "notes": "2 teaspoons"
+            },
+            {
+              "name": "ground cumin",
+              "quantity": 4,
+              "unit": "grams",
+              "notes": "1 teaspoon"
+            },
+            {
+              "name": "paprika",
+              "quantity": 4,
+              "unit": "grams",
+              "notes": "1 teaspoon"
+            },
+            {
+              "name": "lettuce",
+              "quantity": 100,
+              "unit": "grams",
+              "notes": "shredded"
+            },
+            {
+              "name": "tomatoes",
+              "quantity": 200,
+              "unit": "grams",
+              "notes": "diced"
+            },
+            {
+              "name": "cheddar cheese",
+              "quantity": 150,
+              "unit": "grams",
+              "notes": "shredded"
+            },
+            {
+              "name": "sour cream",
+              "quantity": 120,
+              "unit": "ml"
+            },
+            {
+              "name": "vegetable oil",
+              "quantity": 15,
+              "unit": "ml"
+            },
+            {
+              "name": "salt",
+              "quantity": 5,
+              "unit": "grams"
+            },
+            {
+              "name": "black pepper",
+              "quantity": 2,
+              "unit": "grams"
+            }
+          ],
+          "instructions": [
+            "Heat oil in a large skillet over medium-high heat.",
+            "Add diced onion and cook until softened (about 5 minutes).",
+            "Add minced garlic and cook for 1 minute.",
+            "Add ground beef and cook, breaking it up, until browned (about 8 minutes).",
+            "Add chili powder, cumin, paprika, salt, and pepper. Cook for 2 minutes.",
+            "Add 1/4 cup water and simmer until liquid evaporates (about 5 minutes).",
+            "Warm taco shells according to package directions.",
+            "Fill each taco shell with seasoned beef.",
+            "Top with shredded lettuce, diced tomatoes, cheese, and sour cream.",
+            "Serve immediately while shells are warm."
+          ]
+        },
+        "inflammation_score": 0.102,
+        "prep_time": 15,
+        "total_time": 35,
+        "servings": 4
+      }
+    },
+    "Wednesday": {
+      "Breakfast": {
+        "recipe": {
+          "id": 4,
+          "title": "Classic Cheeseburger",
+          "cuisine": "American",
+          "prep_time_minutes": 15,
+          "cook_time_minutes": 15,
+          "total_time_minutes": 30,
+          "servings": 4,
+          "difficulty": "Easy",
+          "category": "Main Course",
+          "meal_type": [
+            "Lunch",
+            "Dinner"
+          ],
+          "ingredients": [
+            {
+              "name": "ground beef",
+              "quantity": 600,
+              "unit": "grams",
+              "notes": "80/20 blend"
+            },
+            {
+              "name": "hamburger buns",
+              "quantity": 4,
+              "unit": "pieces",
+              "notes": "approximately 240g total"
+            },
+            {
+              "name": "cheddar cheese",
+              "quantity": 120,
+              "unit": "grams",
+              "notes": "4 slices"
+            },
+            {
+              "name": "lettuce",
+              "quantity": 80,
+              "unit": "grams",
+              "notes": "iceberg, leaves"
+            },
+            {
+              "name": "tomato",
+              "quantity": 200,
+              "unit": "grams",
+              "notes": "approximately 1 large tomato, sliced"
+            },
+            {
+              "name": "onion",
+              "quantity": 100,
+              "unit": "grams",
+              "notes": "approximately 1 medium onion, sliced"
+            },
+            {
+              "name": "mayonnaise",
+              "quantity": 60,
+              "unit": "ml"
+            },
+            {
+              "name": "ketchup",
+              "quantity": 60,
+              "unit": "ml"
+            },
+            {
+              "name": "vegetable oil",
+              "quantity": 15,
+              "unit": "ml"
+            },
+            {
+              "name": "salt",
+              "quantity": 5,
+              "unit": "grams"
+            },
+            {
+              "name": "black pepper",
+              "quantity": 2,
+              "unit": "grams"
+            }
+          ],
+          "instructions": [
+            "Divide ground beef into 4 equal portions and shape into patties slightly larger than the buns.",
+            "Season both sides of patties with salt and pepper.",
+            "Heat oil in a large skillet or grill pan over medium-high heat.",
+            "Cook patties for 4-5 minutes on first side without pressing down.",
+            "Flip burgers and cook for 3-4 minutes more for medium doneness.",
+            "Add cheese slices to patties in the last minute of cooking.",
+            "Meanwhile, toast burger buns cut-side down until golden.",
+            "Spread mayonnaise on bottom buns and ketchup on top buns.",
+            "Layer bottom bun with lettuce, tomato slice, cooked patty with cheese, onion, and top bun.",
+            "Serve immediately with fries or chips."
+          ]
+        },
+        "inflammation_score": 0.118,
+        "prep_time": 15,
+        "total_time": 30,
+        "servings": 4
+      },
+      "Lunch": {
+        "recipe": {
+          "id": 4,
+          "title": "Classic Cheeseburger",
+          "cuisine": "American",
+          "prep_time_minutes": 15,
+          "cook_time_minutes": 15,
+          "total_time_minutes": 30,
+          "servings": 4,
+          "difficulty": "Easy",
+          "category": "Main Course",
+          "meal_type": [
+            "Lunch",
+            "Dinner"
+          ],
+          "ingredients": [
+            {
+              "name": "ground beef",
+              "quantity": 600,
+              "unit": "grams",
+              "notes": "80/20 blend"
+            },
+            {
+              "name": "hamburger buns",
+              "quantity": 4,
+              "unit": "pieces",
+              "notes": "approximately 240g total"
+            },
+            {
+              "name": "cheddar cheese",
+              "quantity": 120,
+              "unit": "grams",
+              "notes": "4 slices"
+            },
+            {
+              "name": "lettuce",
+              "quantity": 80,
+              "unit": "grams",
+              "notes": "iceberg, leaves"
+            },
+            {
+              "name": "tomato",
+              "quantity": 200,
+              "unit": "grams",
+              "notes": "approximately 1 large tomato, sliced"
+            },
+            {
+              "name": "onion",
+              "quantity": 100,
+              "unit": "grams",
+              "notes": "approximately 1 medium onion, sliced"
+            },
+            {
+              "name": "mayonnaise",
+              "quantity": 60,
+              "unit": "ml"
+            },
+            {
+              "name": "ketchup",
+              "quantity": 60,
+              "unit": "ml"
+            },
+            {
+              "name": "vegetable oil",
+              "quantity": 15,
+              "unit": "ml"
+            },
+            {
+              "name": "salt",
+              "quantity": 5,
+              "unit": "grams"
+            },
+            {
+              "name": "black pepper",
+              "quantity": 2,
+              "unit": "grams"
+            }
+          ],
+          "instructions": [
+            "Divide ground beef into 4 equal portions and shape into patties slightly larger than the buns.",
+            "Season both sides of patties with salt and pepper.",
+            "Heat oil in a large skillet or grill pan over medium-high heat.",
+            "Cook patties for 4-5 minutes on first side without pressing down.",
+            "Flip burgers and cook for 3-4 minutes more for medium doneness.",
+            "Add cheese slices to patties in the last minute of cooking.",
+            "Meanwhile, toast burger buns cut-side down until golden.",
+            "Spread mayonnaise on bottom buns and ketchup on top buns.",
+            "Layer bottom bun with lettuce, tomato slice, cooked patty with cheese, onion, and top bun.",
+            "Serve immediately with fries or chips."
+          ]
+        },
+        "inflammation_score": 0.118,
+        "prep_time": 15,
+        "total_time": 30,
+        "servings": 4
+      },
+      "Dinner": {
+        "recipe": {
+          "id": 2,
+          "title": "Margherita Pizza",
+          "cuisine": "Italian",
+          "prep_time_minutes": 20,
+          "cook_time_minutes": 15,
+          "total_time_minutes": 35,
+          "servings": 2,
+          "difficulty": "Medium",
+          "category": "Main Course",
+          "meal_type": [
+            "Lunch",
+            "Dinner"
+          ],
+          "ingredients": [
+            {
+              "name": "pizza dough",
+              "quantity": 250,
+              "unit": "grams",
+              "notes": "store-bought or homemade"
+            },
+            {
+              "name": "tomato sauce",
+              "quantity": 100,
+              "unit": "ml",
+              "notes": "pizza sauce or marinara"
+            },
+            {
+              "name": "mozzarella cheese",
+              "quantity": 125,
+              "unit": "grams",
+              "notes": "fresh, sliced"
+            },
+            {
+              "name": "fresh basil",
+              "quantity": 15,
+              "unit": "grams",
+              "notes": "leaves"
+            },
+            {
+              "name": "olive oil",
+              "quantity": 15,
+              "unit": "ml",
+              "notes": "extra virgin"
+            },
+            {
+              "name": "salt",
+              "quantity": 2,
+              "unit": "grams"
+            },
+            {
+              "name": "black pepper",
+              "quantity": 1,
+              "unit": "grams",
+              "notes": "freshly ground"
+            }
+          ],
+          "instructions": [
+            "Preheat oven to 250°C (480°F). If using a pizza stone, place it in the oven while preheating.",
+            "Roll out pizza dough on a floured surface to desired thickness.",
+            "Transfer dough to a pizza pan or parchment paper if using a pizza stone.",
+            "Spread tomato sauce evenly over the dough, leaving a 2cm border for the crust.",
+            "Distribute mozzarella slices evenly over the sauce.",
+            "Drizzle with olive oil and season with salt and pepper.",
+            "Bake for 10-15 minutes until crust is golden and cheese is bubbly.",
+            "Remove from oven and immediately top with fresh basil leaves.",
+            "Let cool for 2 minutes before slicing and serving."
+          ]
+        },
+        "inflammation_score": 0.403,
+        "prep_time": 20,
+        "total_time": 35,
+        "servings": 2
+      }
+    },
+    "Thursday": {
+      "Breakfast": {
+        "recipe": {
+          "id": 5,
+          "title": "Chicken Fried Rice",
+          "cuisine": "Chinese",
+          "prep_time_minutes": 15,
+          "cook_time_minutes": 15,
+          "total_time_minutes": 30,
+          "servings": 4,
+          "difficulty": "Easy",
+          "category": "Main Course",
+          "meal_type": [
+            "Lunch",
+            "Dinner"
+          ],
+          "ingredients": [
+            {
+              "name": "cooked rice",
+              "quantity": 600,
+              "unit": "grams",
+              "notes": "preferably day-old, cold"
+            },
+            {
+              "name": "chicken breast",
+              "quantity": 300,
+              "unit": "grams",
+              "notes": "diced small"
+            },
+            {
+              "name": "eggs",
+              "quantity": 3,
+              "unit": "pieces",
+              "notes": "approximately 150g, beaten"
+            },
+            {
+              "name": "frozen peas",
+              "quantity": 100,
+              "unit": "grams"
+            },
+            {
+              "name": "carrot",
+              "quantity": 80,
+              "unit": "grams",
+              "notes": "diced small"
+            },
+            {
+              "name": "green onions",
+              "quantity": 50,
+              "unit": "grams",
+              "notes": "chopped"
+            },
+            {
+              "name": "garlic",
+              "quantity": 10,
+              "unit": "grams",
+              "notes": "minced"
+            },
+            {
+              "name": "soy sauce",
+              "quantity": 45,
+              "unit": "ml",
+              "notes": "3 tablespoons"
+            },
+            {
+              "name": "sesame oil",
+              "quantity": 15,
+              "unit": "ml",
+              "notes": "1 tablespoon"
+            },
+            {
+              "name": "vegetable oil",
+              "quantity": 45,
+              "unit": "ml",
+              "notes": "3 tablespoons"
+            },
+            {
+              "name": "salt",
+              "quantity": 3,
+              "unit": "grams"
+            },
+            {
+              "name": "white pepper",
+              "quantity": 1,
+              "unit": "grams"
+            }
+          ],
+          "instructions": [
+            "Heat 1 tablespoon oil in a large wok or skillet over high heat.",
+            "Add beaten eggs and scramble quickly. Remove and set aside.",
+            "Add another tablespoon of oil to the wok.",
+            "Add diced chicken and stir-fry until cooked through (about 5 minutes).",
+            "Push chicken to one side, add garlic and cook for 30 seconds.",
+            "Add diced carrot and frozen peas, stir-fry for 2 minutes.",
+            "Add cold rice, breaking up any clumps with a spatula.",
+            "Stir-fry rice mixture for 3-4 minutes until heated through.",
+            "Add scrambled eggs back to the wok along with soy sauce and sesame oil.",
+            "Stir everything together and cook for another 2 minutes.",
+            "Season with salt and white pepper to taste.",
+            "Garnish with chopped green onions and serve immediately."
+          ]
+        },
+        "inflammation_score": 1.021,
+        "prep_time": 15,
+        "total_time": 30,
+        "servings": 4
+      },
+      "Lunch": {
+        "recipe": {
+          "id": 3,
+          "title": "Chicken Tikka Masala",
+          "cuisine": "Indian",
+          "prep_time_minutes": 30,
+          "cook_time_minutes": 45,
+          "total_time_minutes": 75,
+          "servings": 4,
+          "difficulty": "Medium",
+          "category": "Main Course",
+          "meal_type": [
+            "Lunch",
+            "Dinner"
+          ],
+          "ingredients": [
+            {
+              "name": "chicken breast",
+              "quantity": 600,
+              "unit": "grams",
+              "notes": "cut into bite-sized pieces"
+            },
+            {
+              "name": "yogurt",
+              "quantity": 120,
+              "unit": "ml",
+              "notes": "plain Greek yogurt"
+            },
+            {
+              "name": "garlic",
+              "quantity": 20,
+              "unit": "grams",
+              "notes": "approximately 4 cloves, minced"
+            },
+            {
+              "name": "ginger",
+              "quantity": 15,
+              "unit": "grams",
+              "notes": "fresh, grated"
+            },
+            {
+              "name": "garam masala",
+              "quantity": 8,
+              "unit": "grams",
+              "notes": "2 teaspoons"
+            },
+            {
+              "name": "ground cumin",
+              "quantity": 5,
+              "unit": "grams",
+              "notes": "1 teaspoon"
+            },
+            {
+              "name": "paprika",
+              "quantity": 5,
+              "unit": "grams",
+              "notes": "1 teaspoon"
+            },
+            {
+              "name": "onion",
+              "quantity": 200,
+              "unit": "grams",
+              "notes": "approximately 1 large onion, diced"
+            },
+            {
+              "name": "canned tomatoes",
+              "quantity": 400,
+              "unit": "grams",
+              "notes": "crushed"
+            },
+            {
+              "name": "heavy cream",
+              "quantity": 200,
+              "unit": "ml"
+            },
+            {
+              "name": "vegetable oil",
+              "quantity": 30,
+              "unit": "ml"
+            },
+            {
+              "name": "salt",
+              "quantity": 8,
+              "unit": "grams"
+            },
+            {
+              "name": "basmati rice",
+              "quantity": 300,
+              "unit": "grams",
+              "notes": "for serving"
+            },
+            {
+              "name": "fresh cilantro",
+              "quantity": 15,
+              "unit": "grams",
+              "notes": "chopped, for garnish"
+            }
+          ],
+          "instructions": [
+            "In a bowl, combine chicken, yogurt, half the garlic, half the ginger, 1 tsp garam masala, cumin, and paprika. Marinate for at least 30 minutes.",
+            "Heat oil in a large pan over medium-high heat. Cook marinated chicken until golden and cooked through (about 8 minutes). Remove and set aside.",
+            "In the same pan, add diced onion and cook until softened (about 5 minutes).",
+            "Add remaining garlic and ginger, cook for 1 minute.",
+            "Add remaining garam masala and cook for 30 seconds until fragrant.",
+            "Add crushed tomatoes and simmer for 10 minutes until sauce thickens.",
+            "Stir in heavy cream and return chicken to the pan.",
+            "Simmer for 5 minutes, season with salt to taste.",
+            "Meanwhile, cook basmati rice according to package directions.",
+            "Serve chicken tikka masala over rice, garnished with fresh cilantro."
+          ]
+        },
+        "inflammation_score": 0.632,
+        "prep_time": 30,
+        "total_time": 75,
+        "servings": 4
+      },
+      "Dinner": {
+        "recipe": {
+          "id": 5,
+          "title": "Chicken Fried Rice",
+          "cuisine": "Chinese",
+          "prep_time_minutes": 15,
+          "cook_time_minutes": 15,
+          "total_time_minutes": 30,
+          "servings": 4,
+          "difficulty": "Easy",
+          "category": "Main Course",
+          "meal_type": [
+            "Lunch",
+            "Dinner"
+          ],
+          "ingredients": [
+            {
+              "name": "cooked rice",
+              "quantity": 600,
+              "unit": "grams",
+              "notes": "preferably day-old, cold"
+            },
+            {
+              "name": "chicken breast",
+              "quantity": 300,
+              "unit": "grams",
+              "notes": "diced small"
+            },
+            {
+              "name": "eggs",
+              "quantity": 3,
+              "unit": "pieces",
+              "notes": "approximately 150g, beaten"
+            },
+            {
+              "name": "frozen peas",
+              "quantity": 100,
+              "unit": "grams"
+            },
+            {
+              "name": "carrot",
+              "quantity": 80,
+              "unit": "grams",
+              "notes": "diced small"
+            },
+            {
+              "name": "green onions",
+              "quantity": 50,
+              "unit": "grams",
+              "notes": "chopped"
+            },
+            {
+              "name": "garlic",
+              "quantity": 10,
+              "unit": "grams",
+              "notes": "minced"
+            },
+            {
+              "name": "soy sauce",
+              "quantity": 45,
+              "unit": "ml",
+              "notes": "3 tablespoons"
+            },
+            {
+              "name": "sesame oil",
+              "quantity": 15,
+              "unit": "ml",
+              "notes": "1 tablespoon"
+            },
+            {
+              "name": "vegetable oil",
+              "quantity": 45,
+              "unit": "ml",
+              "notes": "3 tablespoons"
+            },
+            {
+              "name": "salt",
+              "quantity": 3,
+              "unit": "grams"
+            },
+            {
+              "name": "white pepper",
+              "quantity": 1,
+              "unit": "grams"
+            }
+          ],
+          "instructions": [
+            "Heat 1 tablespoon oil in a large wok or skillet over high heat.",
+            "Add beaten eggs and scramble quickly. Remove and set aside.",
+            "Add another tablespoon of oil to the wok.",
+            "Add diced chicken and stir-fry until cooked through (about 5 minutes).",
+            "Push chicken to one side, add garlic and cook for 30 seconds.",
+            "Add diced carrot and frozen peas, stir-fry for 2 minutes.",
+            "Add cold rice, breaking up any clumps with a spatula.",
+            "Stir-fry rice mixture for 3-4 minutes until heated through.",
+            "Add scrambled eggs back to the wok along with soy sauce and sesame oil.",
+            "Stir everything together and cook for another 2 minutes.",
+            "Season with salt and white pepper to taste.",
+            "Garnish with chopped green onions and serve immediately."
+          ]
+        },
+        "inflammation_score": 1.021,
+        "prep_time": 15,
+        "total_time": 30,
+        "servings": 4
+      }
+    },
+    "Friday": {
+      "Breakfast": {
+        "recipe": {
+          "id": 9,
+          "title": "Chocolate Chip Cookies",
+          "cuisine": "American",
+          "prep_time_minutes": 15,
+          "cook_time_minutes": 12,
+          "total_time_minutes": 27,
+          "servings": 24,
+          "difficulty": "Easy",
+          "category": "Dessert",
+          "meal_type": [
+            "Dessert"
+          ],
+          "ingredients": [
+            {
+              "name": "all-purpose flour",
+              "quantity": 280,
+              "unit": "grams",
+              "notes": "approximately 2.25 cups"
+            },
+            {
+              "name": "butter",
+              "quantity": 230,
+              "unit": "grams",
+              "notes": "softened"
+            },
+            {
+              "name": "brown sugar",
+              "quantity": 150,
+              "unit": "grams",
+              "notes": "packed"
+            },
+            {
+              "name": "granulated sugar",
+              "quantity": 100,
+              "unit": "grams"
+            },
+            {
+              "name": "eggs",
+              "quantity": 2,
+              "unit": "pieces",
+              "notes": "approximately 100g, large"
+            },
+            {
+              "name": "vanilla extract",
+              "quantity": 10,
+              "unit": "ml",
+              "notes": "2 teaspoons"
+            },
+            {
+              "name": "baking soda",
+              "quantity": 5,
+              "unit": "grams",
+              "notes": "1 teaspoon"
+            },
+            {
+              "name": "salt",
+              "quantity": 5,
+              "unit": "grams",
+              "notes": "1 teaspoon"
+            },
+            {
+              "name": "chocolate chips",
+              "quantity": 200,
+              "unit": "grams",
+              "notes": "semi-sweet"
+            }
+          ],
+          "instructions": [
+            "Preheat oven to 190°C (375°F).",
+            "In a bowl, cream together softened butter, brown sugar, and granulated sugar until light and fluffy (about 3 minutes).",
+            "Beat in eggs one at a time, then add vanilla extract.",
+            "In a separate bowl, whisk together flour, baking soda, and salt.",
+            "Gradually mix the dry ingredients into the butter mixture until just combined.",
+            "Stir in chocolate chips.",
+            "Drop rounded tablespoons of dough onto ungreased baking sheets, spacing 2 inches apart.",
+            "Bake for 9-11 minutes until edges are golden brown but centers still look slightly underbaked.",
+            "Cool on baking sheet for 5 minutes before transferring to a wire rack.",
+            "Store in an airtight container for up to 1 week."
+          ]
+        },
+        "inflammation_score": -0.01,
+        "prep_time": 15,
+        "total_time": 27,
+        "servings": 24
+      },
+      "Lunch": {
+        "recipe": {
+          "id": 9,
+          "title": "Chocolate Chip Cookies",
+          "cuisine": "American",
+          "prep_time_minutes": 15,
+          "cook_time_minutes": 12,
+          "total_time_minutes": 27,
+          "servings": 24,
+          "difficulty": "Easy",
+          "category": "Dessert",
+          "meal_type": [
+            "Dessert"
+          ],
+          "ingredients": [
+            {
+              "name": "all-purpose flour",
+              "quantity": 280,
+              "unit": "grams",
+              "notes": "approximately 2.25 cups"
+            },
+            {
+              "name": "butter",
+              "quantity": 230,
+              "unit": "grams",
+              "notes": "softened"
+            },
+            {
+              "name": "brown sugar",
+              "quantity": 150,
+              "unit": "grams",
+              "notes": "packed"
+            },
+            {
+              "name": "granulated sugar",
+              "quantity": 100,
+              "unit": "grams"
+            },
+            {
+              "name": "eggs",
+              "quantity": 2,
+              "unit": "pieces",
+              "notes": "approximately 100g, large"
+            },
+            {
+              "name": "vanilla extract",
+              "quantity": 10,
+              "unit": "ml",
+              "notes": "2 teaspoons"
+            },
+            {
+              "name": "baking soda",
+              "quantity": 5,
+              "unit": "grams",
+              "notes": "1 teaspoon"
+            },
+            {
+              "name": "salt",
+              "quantity": 5,
+              "unit": "grams",
+              "notes": "1 teaspoon"
+            },
+            {
+              "name": "chocolate chips",
+              "quantity": 200,
+              "unit": "grams",
+              "notes": "semi-sweet"
+            }
+          ],
+          "instructions": [
+            "Preheat oven to 190°C (375°F).",
+            "In a bowl, cream together softened butter, brown sugar, and granulated sugar until light and fluffy (about 3 minutes).",
+            "Beat in eggs one at a time, then add vanilla extract.",
+            "In a separate bowl, whisk together flour, baking soda, and salt.",
+            "Gradually mix the dry ingredients into the butter mixture until just combined.",
+            "Stir in chocolate chips.",
+            "Drop rounded tablespoons of dough onto ungreased baking sheets, spacing 2 inches apart.",
+            "Bake for 9-11 minutes until edges are golden brown but centers still look slightly underbaked.",
+            "Cool on baking sheet for 5 minutes before transferring to a wire rack.",
+            "Store in an airtight container for up to 1 week."
+          ]
+        },
+        "inflammation_score": -0.01,
+        "prep_time": 15,
+        "total_time": 27,
+        "servings": 24
+      },
+      "Dinner": {
+        "recipe": {
+          "id": 9,
+          "title": "Chocolate Chip Cookies",
+          "cuisine": "American",
+          "prep_time_minutes": 15,
+          "cook_time_minutes": 12,
+          "total_time_minutes": 27,
+          "servings": 24,
+          "difficulty": "Easy",
+          "category": "Dessert",
+          "meal_type": [
+            "Dessert"
+          ],
+          "ingredients": [
+            {
+              "name": "all-purpose flour",
+              "quantity": 280,
+              "unit": "grams",
+              "notes": "approximately 2.25 cups"
+            },
+            {
+              "name": "butter",
+              "quantity": 230,
+              "unit": "grams",
+              "notes": "softened"
+            },
+            {
+              "name": "brown sugar",
+              "quantity": 150,
+              "unit": "grams",
+              "notes": "packed"
+            },
+            {
+              "name": "granulated sugar",
+              "quantity": 100,
+              "unit": "grams"
+            },
+            {
+              "name": "eggs",
+              "quantity": 2,
+              "unit": "pieces",
+              "notes": "approximately 100g, large"
+            },
+            {
+              "name": "vanilla extract",
+              "quantity": 10,
+              "unit": "ml",
+              "notes": "2 teaspoons"
+            },
+            {
+              "name": "baking soda",
+              "quantity": 5,
+              "unit": "grams",
+              "notes": "1 teaspoon"
+            },
+            {
+              "name": "salt",
+              "quantity": 5,
+              "unit": "grams",
+              "notes": "1 teaspoon"
+            },
+            {
+              "name": "chocolate chips",
+              "quantity": 200,
+              "unit": "grams",
+              "notes": "semi-sweet"
+            }
+          ],
+          "instructions": [
+            "Preheat oven to 190°C (375°F).",
+            "In a bowl, cream together softened butter, brown sugar, and granulated sugar until light and fluffy (about 3 minutes).",
+            "Beat in eggs one at a time, then add vanilla extract.",
+            "In a separate bowl, whisk together flour, baking soda, and salt.",
+            "Gradually mix the dry ingredients into the butter mixture until just combined.",
+            "Stir in chocolate chips.",
+            "Drop rounded tablespoons of dough onto ungreased baking sheets, spacing 2 inches apart.",
+            "Bake for 9-11 minutes until edges are golden brown but centers still look slightly underbaked.",
+            "Cool on baking sheet for 5 minutes before transferring to a wire rack.",
+            "Store in an airtight container for up to 1 week."
+          ]
+        },
+        "inflammation_score": -0.01,
+        "prep_time": 15,
+        "total_time": 27,
+        "servings": 24
+      }
+    },
+    "Saturday": {
+      "Breakfast": {
+        "recipe": {
+          "id": 9,
+          "title": "Chocolate Chip Cookies",
+          "cuisine": "American",
+          "prep_time_minutes": 15,
+          "cook_time_minutes": 12,
+          "total_time_minutes": 27,
+          "servings": 24,
+          "difficulty": "Easy",
+          "category": "Dessert",
+          "meal_type": [
+            "Dessert"
+          ],
+          "ingredients": [
+            {
+              "name": "all-purpose flour",
+              "quantity": 280,
+              "unit": "grams",
+              "notes": "approximately 2.25 cups"
+            },
+            {
+              "name": "butter",
+              "quantity": 230,
+              "unit": "grams",
+              "notes": "softened"
+            },
+            {
+              "name": "brown sugar",
+              "quantity": 150,
+              "unit": "grams",
+              "notes": "packed"
+            },
+            {
+              "name": "granulated sugar",
+              "quantity": 100,
+              "unit": "grams"
+            },
+            {
+              "name": "eggs",
+              "quantity": 2,
+              "unit": "pieces",
+              "notes": "approximately 100g, large"
+            },
+            {
+              "name": "vanilla extract",
+              "quantity": 10,
+              "unit": "ml",
+              "notes": "2 teaspoons"
+            },
+            {
+              "name": "baking soda",
+              "quantity": 5,
+              "unit": "grams",
+              "notes": "1 teaspoon"
+            },
+            {
+              "name": "salt",
+              "quantity": 5,
+              "unit": "grams",
+              "notes": "1 teaspoon"
+            },
+            {
+              "name": "chocolate chips",
+              "quantity": 200,
+              "unit": "grams",
+              "notes": "semi-sweet"
+            }
+          ],
+          "instructions": [
+            "Preheat oven to 190°C (375°F).",
+            "In a bowl, cream together softened butter, brown sugar, and granulated sugar until light and fluffy (about 3 minutes).",
+            "Beat in eggs one at a time, then add vanilla extract.",
+            "In a separate bowl, whisk together flour, baking soda, and salt.",
+            "Gradually mix the dry ingredients into the butter mixture until just combined.",
+            "Stir in chocolate chips.",
+            "Drop rounded tablespoons of dough onto ungreased baking sheets, spacing 2 inches apart.",
+            "Bake for 9-11 minutes until edges are golden brown but centers still look slightly underbaked.",
+            "Cool on baking sheet for 5 minutes before transferring to a wire rack.",
+            "Store in an airtight container for up to 1 week."
+          ]
+        },
+        "inflammation_score": -0.01,
+        "prep_time": 15,
+        "total_time": 27,
+        "servings": 24
+      },
+      "Lunch": {
+        "recipe": {
+          "id": 9,
+          "title": "Chocolate Chip Cookies",
+          "cuisine": "American",
+          "prep_time_minutes": 15,
+          "cook_time_minutes": 12,
+          "total_time_minutes": 27,
+          "servings": 24,
+          "difficulty": "Easy",
+          "category": "Dessert",
+          "meal_type": [
+            "Dessert"
+          ],
+          "ingredients": [
+            {
+              "name": "all-purpose flour",
+              "quantity": 280,
+              "unit": "grams",
+              "notes": "approximately 2.25 cups"
+            },
+            {
+              "name": "butter",
+              "quantity": 230,
+              "unit": "grams",
+              "notes": "softened"
+            },
+            {
+              "name": "brown sugar",
+              "quantity": 150,
+              "unit": "grams",
+              "notes": "packed"
+            },
+            {
+              "name": "granulated sugar",
+              "quantity": 100,
+              "unit": "grams"
+            },
+            {
+              "name": "eggs",
+              "quantity": 2,
+              "unit": "pieces",
+              "notes": "approximately 100g, large"
+            },
+            {
+              "name": "vanilla extract",
+              "quantity": 10,
+              "unit": "ml",
+              "notes": "2 teaspoons"
+            },
+            {
+              "name": "baking soda",
+              "quantity": 5,
+              "unit": "grams",
+              "notes": "1 teaspoon"
+            },
+            {
+              "name": "salt",
+              "quantity": 5,
+              "unit": "grams",
+              "notes": "1 teaspoon"
+            },
+            {
+              "name": "chocolate chips",
+              "quantity": 200,
+              "unit": "grams",
+              "notes": "semi-sweet"
+            }
+          ],
+          "instructions": [
+            "Preheat oven to 190°C (375°F).",
+            "In a bowl, cream together softened butter, brown sugar, and granulated sugar until light and fluffy (about 3 minutes).",
+            "Beat in eggs one at a time, then add vanilla extract.",
+            "In a separate bowl, whisk together flour, baking soda, and salt.",
+            "Gradually mix the dry ingredients into the butter mixture until just combined.",
+            "Stir in chocolate chips.",
+            "Drop rounded tablespoons of dough onto ungreased baking sheets, spacing 2 inches apart.",
+            "Bake for 9-11 minutes until edges are golden brown but centers still look slightly underbaked.",
+            "Cool on baking sheet for 5 minutes before transferring to a wire rack.",
+            "Store in an airtight container for up to 1 week."
+          ]
+        },
+        "inflammation_score": -0.01,
+        "prep_time": 15,
+        "total_time": 27,
+        "servings": 24
+      },
+      "Dinner": {
+        "recipe": {
+          "id": 9,
+          "title": "Chocolate Chip Cookies",
+          "cuisine": "American",
+          "prep_time_minutes": 15,
+          "cook_time_minutes": 12,
+          "total_time_minutes": 27,
+          "servings": 24,
+          "difficulty": "Easy",
+          "category": "Dessert",
+          "meal_type": [
+            "Dessert"
+          ],
+          "ingredients": [
+            {
+              "name": "all-purpose flour",
+              "quantity": 280,
+              "unit": "grams",
+              "notes": "approximately 2.25 cups"
+            },
+            {
+              "name": "butter",
+              "quantity": 230,
+              "unit": "grams",
+              "notes": "softened"
+            },
+            {
+              "name": "brown sugar",
+              "quantity": 150,
+              "unit": "grams",
+              "notes": "packed"
+            },
+            {
+              "name": "granulated sugar",
+              "quantity": 100,
+              "unit": "grams"
+            },
+            {
+              "name": "eggs",
+              "quantity": 2,
+              "unit": "pieces",
+              "notes": "approximately 100g, large"
+            },
+            {
+              "name": "vanilla extract",
+              "quantity": 10,
+              "unit": "ml",
+              "notes": "2 teaspoons"
+            },
+            {
+              "name": "baking soda",
+              "quantity": 5,
+              "unit": "grams",
+              "notes": "1 teaspoon"
+            },
+            {
+              "name": "salt",
+              "quantity": 5,
+              "unit": "grams",
+              "notes": "1 teaspoon"
+            },
+            {
+              "name": "chocolate chips",
+              "quantity": 200,
+              "unit": "grams",
+              "notes": "semi-sweet"
+            }
+          ],
+          "instructions": [
+            "Preheat oven to 190°C (375°F).",
+            "In a bowl, cream together softened butter, brown sugar, and granulated sugar until light and fluffy (about 3 minutes).",
+            "Beat in eggs one at a time, then add vanilla extract.",
+            "In a separate bowl, whisk together flour, baking soda, and salt.",
+            "Gradually mix the dry ingredients into the butter mixture until just combined.",
+            "Stir in chocolate chips.",
+            "Drop rounded tablespoons of dough onto ungreased baking sheets, spacing 2 inches apart.",
+            "Bake for 9-11 minutes until edges are golden brown but centers still look slightly underbaked.",
+            "Cool on baking sheet for 5 minutes before transferring to a wire rack.",
+            "Store in an airtight container for up to 1 week."
+          ]
+        },
+        "inflammation_score": -0.01,
+        "prep_time": 15,
+        "total_time": 27,
+        "servings": 24
+      }
+    },
+    "Sunday": {
+      "Breakfast": {
+        "recipe": {
+          "id": 9,
+          "title": "Chocolate Chip Cookies",
+          "cuisine": "American",
+          "prep_time_minutes": 15,
+          "cook_time_minutes": 12,
+          "total_time_minutes": 27,
+          "servings": 24,
+          "difficulty": "Easy",
+          "category": "Dessert",
+          "meal_type": [
+            "Dessert"
+          ],
+          "ingredients": [
+            {
+              "name": "all-purpose flour",
+              "quantity": 280,
+              "unit": "grams",
+              "notes": "approximately 2.25 cups"
+            },
+            {
+              "name": "butter",
+              "quantity": 230,
+              "unit": "grams",
+              "notes": "softened"
+            },
+            {
+              "name": "brown sugar",
+              "quantity": 150,
+              "unit": "grams",
+              "notes": "packed"
+            },
+            {
+              "name": "granulated sugar",
+              "quantity": 100,
+              "unit": "grams"
+            },
+            {
+              "name": "eggs",
+              "quantity": 2,
+              "unit": "pieces",
+              "notes": "approximately 100g, large"
+            },
+            {
+              "name": "vanilla extract",
+              "quantity": 10,
+              "unit": "ml",
+              "notes": "2 teaspoons"
+            },
+            {
+              "name": "baking soda",
+              "quantity": 5,
+              "unit": "grams",
+              "notes": "1 teaspoon"
+            },
+            {
+              "name": "salt",
+              "quantity": 5,
+              "unit": "grams",
+              "notes": "1 teaspoon"
+            },
+            {
+              "name": "chocolate chips",
+              "quantity": 200,
+              "unit": "grams",
+              "notes": "semi-sweet"
+            }
+          ],
+          "instructions": [
+            "Preheat oven to 190°C (375°F).",
+            "In a bowl, cream together softened butter, brown sugar, and granulated sugar until light and fluffy (about 3 minutes).",
+            "Beat in eggs one at a time, then add vanilla extract.",
+            "In a separate bowl, whisk together flour, baking soda, and salt.",
+            "Gradually mix the dry ingredients into the butter mixture until just combined.",
+            "Stir in chocolate chips.",
+            "Drop rounded tablespoons of dough onto ungreased baking sheets, spacing 2 inches apart.",
+            "Bake for 9-11 minutes until edges are golden brown but centers still look slightly underbaked.",
+            "Cool on baking sheet for 5 minutes before transferring to a wire rack.",
+            "Store in an airtight container for up to 1 week."
+          ]
+        },
+        "inflammation_score": -0.01,
+        "prep_time": 15,
+        "total_time": 27,
+        "servings": 24
+      },
+      "Lunch": {
+        "recipe": {
+          "id": 9,
+          "title": "Chocolate Chip Cookies",
+          "cuisine": "American",
+          "prep_time_minutes": 15,
+          "cook_time_minutes": 12,
+          "total_time_minutes": 27,
+          "servings": 24,
+          "difficulty": "Easy",
+          "category": "Dessert",
+          "meal_type": [
+            "Dessert"
+          ],
+          "ingredients": [
+            {
+              "name": "all-purpose flour",
+              "quantity": 280,
+              "unit": "grams",
+              "notes": "approximately 2.25 cups"
+            },
+            {
+              "name": "butter",
+              "quantity": 230,
+              "unit": "grams",
+              "notes": "softened"
+            },
+            {
+              "name": "brown sugar",
+              "quantity": 150,
+              "unit": "grams",
+              "notes": "packed"
+            },
+            {
+              "name": "granulated sugar",
+              "quantity": 100,
+              "unit": "grams"
+            },
+            {
+              "name": "eggs",
+              "quantity": 2,
+              "unit": "pieces",
+              "notes": "approximately 100g, large"
+            },
+            {
+              "name": "vanilla extract",
+              "quantity": 10,
+              "unit": "ml",
+              "notes": "2 teaspoons"
+            },
+            {
+              "name": "baking soda",
+              "quantity": 5,
+              "unit": "grams",
+              "notes": "1 teaspoon"
+            },
+            {
+              "name": "salt",
+              "quantity": 5,
+              "unit": "grams",
+              "notes": "1 teaspoon"
+            },
+            {
+              "name": "chocolate chips",
+              "quantity": 200,
+              "unit": "grams",
+              "notes": "semi-sweet"
+            }
+          ],
+          "instructions": [
+            "Preheat oven to 190°C (375°F).",
+            "In a bowl, cream together softened butter, brown sugar, and granulated sugar until light and fluffy (about 3 minutes).",
+            "Beat in eggs one at a time, then add vanilla extract.",
+            "In a separate bowl, whisk together flour, baking soda, and salt.",
+            "Gradually mix the dry ingredients into the butter mixture until just combined.",
+            "Stir in chocolate chips.",
+            "Drop rounded tablespoons of dough onto ungreased baking sheets, spacing 2 inches apart.",
+            "Bake for 9-11 minutes until edges are golden brown but centers still look slightly underbaked.",
+            "Cool on baking sheet for 5 minutes before transferring to a wire rack.",
+            "Store in an airtight container for up to 1 week."
+          ]
+        },
+        "inflammation_score": -0.01,
+        "prep_time": 15,
+        "total_time": 27,
+        "servings": 24
+      },
+      "Dinner": {
+        "recipe": {
+          "id": 9,
+          "title": "Chocolate Chip Cookies",
+          "cuisine": "American",
+          "prep_time_minutes": 15,
+          "cook_time_minutes": 12,
+          "total_time_minutes": 27,
+          "servings": 24,
+          "difficulty": "Easy",
+          "category": "Dessert",
+          "meal_type": [
+            "Dessert"
+          ],
+          "ingredients": [
+            {
+              "name": "all-purpose flour",
+              "quantity": 280,
+              "unit": "grams",
+              "notes": "approximately 2.25 cups"
+            },
+            {
+              "name": "butter",
+              "quantity": 230,
+              "unit": "grams",
+              "notes": "softened"
+            },
+            {
+              "name": "brown sugar",
+              "quantity": 150,
+              "unit": "grams",
+              "notes": "packed"
+            },
+            {
+              "name": "granulated sugar",
+              "quantity": 100,
+              "unit": "grams"
+            },
+            {
+              "name": "eggs",
+              "quantity": 2,
+              "unit": "pieces",
+              "notes": "approximately 100g, large"
+            },
+            {
+              "name": "vanilla extract",
+              "quantity": 10,
+              "unit": "ml",
+              "notes": "2 teaspoons"
+            },
+            {
+              "name": "baking soda",
+              "quantity": 5,
+              "unit": "grams",
+              "notes": "1 teaspoon"
+            },
+            {
+              "name": "salt",
+              "quantity": 5,
+              "unit": "grams",
+              "notes": "1 teaspoon"
+            },
+            {
+              "name": "chocolate chips",
+              "quantity": 200,
+              "unit": "grams",
+              "notes": "semi-sweet"
+            }
+          ],
+          "instructions": [
+            "Preheat oven to 190°C (375°F).",
+            "In a bowl, cream together softened butter, brown sugar, and granulated sugar until light and fluffy (about 3 minutes).",
+            "Beat in eggs one at a time, then add vanilla extract.",
+            "In a separate bowl, whisk together flour, baking soda, and salt.",
+            "Gradually mix the dry ingredients into the butter mixture until just combined.",
+            "Stir in chocolate chips.",
+            "Drop rounded tablespoons of dough onto ungreased baking sheets, spacing 2 inches apart.",
+            "Bake for 9-11 minutes until edges are golden brown but centers still look slightly underbaked.",
+            "Cool on baking sheet for 5 minutes before transferring to a wire rack.",
+            "Store in an airtight container for up to 1 week."
+          ]
+        },
+        "inflammation_score": -0.01,
+        "prep_time": 15,
+        "total_time": 27,
+        "servings": 24
+      }
+    }
+  },
+  "statistics": {
+    "total_weekly_inflammation_score": 1.879,
+    "average_daily_inflammation_score": 0.268,
+    "total_meals": 21
+  }
+}

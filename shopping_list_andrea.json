@@ -1,0 +1,629 @@
+{
+  "shopping_list": {
+    "all-purpose flour": {
+      "unit": "grams",
+      "total_quantity": 3000,
+      "used_in_meals": [
+        "Monday Breakfast: Classic Pancakes",
+        "Tuesday Breakfast: Chocolate Chip Cookies",
+        "Friday Breakfast: Chocolate Chip Cookies",
+        "Friday Lunch: Chocolate Chip Cookies",
+        "Friday Dinner: Chocolate Chip Cookies",
+        "Saturday Breakfast: Chocolate Chip Cookies",
+        "Saturday Lunch: Chocolate Chip Cookies",
+        "Saturday Dinner: Chocolate Chip Cookies",
+        "Sunday Breakfast: Chocolate Chip Cookies",
+        "Sunday Lunch: Chocolate Chip Cookies",
+        "Sunday Dinner: Chocolate Chip Cookies"
+      ]
+    },
+    "sugar": {
+      "unit": "grams",
+      "total_quantity": 25,
+      "used_in_meals": [
+        "Monday Breakfast: Classic Pancakes"
+      ]
+    },
+    "baking powder": {
+      "unit": "grams",
+      "total_quantity": 8,
+      "used_in_meals": [
+        "Monday Breakfast: Classic Pancakes"
+      ]
+    },
+    "salt": {
+      "unit": "grams",
+      "total_quantity": 105,
+      "used_in_meals": [
+        "Monday Breakfast: Classic Pancakes",
+        "Monday Lunch: Chicken Noodle Soup",
+        "Monday Dinner: Chicken Tikka Masala",
+        "Tuesday Breakfast: Chocolate Chip Cookies",
+        "Tuesday Lunch: Classic Cheeseburger",
+        "Tuesday Dinner: Spaghetti Bolognese",
+        "Wednesday Breakfast: Beef Tacos",
+        "Wednesday Lunch: Beef Tacos",
+        "Wednesday Dinner: Caesar Salad",
+        "Thursday Breakfast: Chicken Fried Rice",
+        "Thursday Lunch: Margherita Pizza",
+        "Thursday Dinner: Chicken Fried Rice",
+        "Friday Breakfast: Chocolate Chip Cookies",
+        "Friday Lunch: Chocolate Chip Cookies",
+        "Friday Dinner: Chocolate Chip Cookies",
+        "Saturday Breakfast: Chocolate Chip Cookies",
+        "Saturday Lunch: Chocolate Chip Cookies",
+        "Saturday Dinner: Chocolate Chip Cookies",
+        "Sunday Breakfast: Chocolate Chip Cookies",
+        "Sunday Lunch: Chocolate Chip Cookies",
+        "Sunday Dinner: Chocolate Chip Cookies"
+      ]
+    },
+    "milk": {
+      "unit": "ml",
+      "total_quantity": 300,
+      "used_in_meals": [
+        "Monday Breakfast: Classic Pancakes"
+      ]
+    },
+    "eggs": {
+      "unit": "pieces",
+      "total_quantity": 28,
+      "used_in_meals": [
+        "Monday Breakfast: Classic Pancakes",
+        "Tuesday Breakfast: Chocolate Chip Cookies",
+        "Thursday Breakfast: Chicken Fried Rice",
+        "Thursday Dinner: Chicken Fried Rice",
+        "Friday Breakfast: Chocolate Chip Cookies",
+        "Friday Lunch: Chocolate Chip Cookies",
+        "Friday Dinner: Chocolate Chip Cookies",
+        "Saturday Breakfast: Chocolate Chip Cookies",
+        "Saturday Lunch: Chocolate Chip Cookies",
+        "Saturday Dinner: Chocolate Chip Cookies",
+        "Sunday Breakfast: Chocolate Chip Cookies",
+        "Sunday Lunch: Chocolate Chip Cookies",
+        "Sunday Dinner: Chocolate Chip Cookies"
+      ]
+    },
+    "butter": {
+      "unit": "grams",
+      "total_quantity": 2360,
+      "used_in_meals": [
+        "Monday Breakfast: Classic Pancakes",
+        "Tuesday Breakfast: Chocolate Chip Cookies",
+        "Friday Breakfast: Chocolate Chip Cookies",
+        "Friday Lunch: Chocolate Chip Cookies",
+        "Friday Dinner: Chocolate Chip Cookies",
+        "Saturday Breakfast: Chocolate Chip Cookies",
+        "Saturday Lunch: Chocolate Chip Cookies",
+        "Saturday Dinner: Chocolate Chip Cookies",
+        "Sunday Breakfast: Chocolate Chip Cookies",
+        "Sunday Lunch: Chocolate Chip Cookies",
+        "Sunday Dinner: Chocolate Chip Cookies"
+      ]
+    },
+    "vanilla extract": {
+      "unit": "ml",
+      "total_quantity": 105,
+      "used_in_meals": [
+        "Monday Breakfast: Classic Pancakes",
+        "Tuesday Breakfast: Chocolate Chip Cookies",
+        "Friday Breakfast: Chocolate Chip Cookies",
+        "Friday Lunch: Chocolate Chip Cookies",
+        "Friday Dinner: Chocolate Chip Cookies",
+        "Saturday Breakfast: Chocolate Chip Cookies",
+        "Saturday Lunch: Chocolate Chip Cookies",
+        "Saturday Dinner: Chocolate Chip Cookies",
+        "Sunday Breakfast: Chocolate Chip Cookies",
+        "Sunday Lunch: Chocolate Chip Cookies",
+        "Sunday Dinner: Chocolate Chip Cookies"
+      ]
+    },
+    "maple syrup": {
+      "unit": "ml",
+      "total_quantity": 120,
+      "used_in_meals": [
+        "Monday Breakfast: Classic Pancakes"
+      ]
+    },
+    "chicken breast": {
+      "unit": "grams",
+      "total_quantity": 1600,
+      "used_in_meals": [
+        "Monday Lunch: Chicken Noodle Soup",
+        "Monday Dinner: Chicken Tikka Masala",
+        "Thursday Breakfast: Chicken Fried Rice",
+        "Thursday Dinner: Chicken Fried Rice"
+      ]
+    },
+    "egg noodles": {
+      "unit": "grams",
+      "total_quantity": 200,
+      "used_in_meals": [
+        "Monday Lunch: Chicken Noodle Soup"
+      ]
+    },
+    "carrots": {
+      "unit": "grams",
+      "total_quantity": 150,
+      "used_in_meals": [
+        "Monday Lunch: Chicken Noodle Soup"
+      ]
+    },
+    "celery": {
+      "unit": "grams",
+      "total_quantity": 180,
+      "used_in_meals": [
+        "Monday Lunch: Chicken Noodle Soup",
+        "Tuesday Dinner: Spaghetti Bolognese"
+      ]
+    },
+    "onion": {
+      "unit": "grams",
+      "total_quantity": 900,
+      "used_in_meals": [
+        "Monday Lunch: Chicken Noodle Soup",
+        "Monday Dinner: Chicken Tikka Masala",
+        "Tuesday Lunch: Classic Cheeseburger",
+        "Tuesday Dinner: Spaghetti Bolognese",
+        "Wednesday Breakfast: Beef Tacos",
+        "Wednesday Lunch: Beef Tacos"
+      ]
+    },
+    "garlic": {
+      "unit": "grams",
+      "total_quantity": 93,
+      "used_in_meals": [
+        "Monday Lunch: Chicken Noodle Soup",
+        "Monday Dinner: Chicken Tikka Masala",
+        "Tuesday Dinner: Spaghetti Bolognese",
+        "Wednesday Breakfast: Beef Tacos",
+        "Wednesday Lunch: Beef Tacos",
+        "Wednesday Dinner: Caesar Salad",
+        "Thursday Breakfast: Chicken Fried Rice",
+        "Thursday Dinner: Chicken Fried Rice"
+      ]
+    },
+    "chicken broth": {
+      "unit": "ml",
+      "total_quantity": 1500,
+      "used_in_meals": [
+        "Monday Lunch: Chicken Noodle Soup"
+      ]
+    },
+    "bay leaves": {
+      "unit": "pieces",
+      "total_quantity": 2,
+      "used_in_meals": [
+        "Monday Lunch: Chicken Noodle Soup"
+      ]
+    },
+    "dried thyme": {
+      "unit": "grams",
+      "total_quantity": 3,
+      "used_in_meals": [
+        "Monday Lunch: Chicken Noodle Soup"
+      ]
+    },
+    "olive oil": {
+      "unit": "ml",
+      "total_quantity": 120,
+      "used_in_meals": [
+        "Monday Lunch: Chicken Noodle Soup",
+        "Tuesday Dinner: Spaghetti Bolognese",
+        "Wednesday Dinner: Caesar Salad",
+        "Thursday Lunch: Margherita Pizza"
+      ]
+    },
+    "black pepper": {
+      "unit": "grams",
+      "total_quantity": 14,
+      "used_in_meals": [
+        "Monday Lunch: Chicken Noodle Soup",
+        "Tuesday Lunch: Classic Cheeseburger",
+        "Tuesday Dinner: Spaghetti Bolognese",
+        "Wednesday Breakfast: Beef Tacos",
+        "Wednesday Lunch: Beef Tacos",
+        "Wednesday Dinner: Caesar Salad",
+        "Thursday Lunch: Margherita Pizza"
+      ]
+    },
+    "fresh parsley": {
+      "unit": "grams",
+      "total_quantity": 15,
+      "used_in_meals": [
+        "Monday Lunch: Chicken Noodle Soup"
+      ]
+    },
+    "yogurt": {
+      "unit": "ml",
+      "total_quantity": 120,
+      "used_in_meals": [
+        "Monday Dinner: Chicken Tikka Masala"
+      ]
+    },
+    "ginger": {
+      "unit": "grams",
+      "total_quantity": 15,
+      "used_in_meals": [
+        "Monday Dinner: Chicken Tikka Masala"
+      ]
+    },
+    "garam masala": {
+      "unit": "grams",
+      "total_quantity": 8,
+      "used_in_meals": [
+        "Monday Dinner: Chicken Tikka Masala"
+      ]
+    },
+    "ground cumin": {
+      "unit": "grams",
+      "total_quantity": 13,
+      "used_in_meals": [
+        "Monday Dinner: Chicken Tikka Masala",
+        "Wednesday Breakfast: Beef Tacos",
+        "Wednesday Lunch: Beef Tacos"
+      ]
+    },
+    "paprika": {
+      "unit": "grams",
+      "total_quantity": 13,
+      "used_in_meals": [
+        "Monday Dinner: Chicken Tikka Masala",
+        "Wednesday Breakfast: Beef Tacos",
+        "Wednesday Lunch: Beef Tacos"
+      ]
+    },
+    "canned tomatoes": {
+      "unit": "grams",
+      "total_quantity": 800,
+      "used_in_meals": [
+        "Monday Dinner: Chicken Tikka Masala",
+        "Tuesday Dinner: Spaghetti Bolognese"
+      ]
+    },
+    "heavy cream": {
+      "unit": "ml",
+      "total_quantity": 200,
+      "used_in_meals": [
+        "Monday Dinner: Chicken Tikka Masala"
+      ]
+    },
+    "vegetable oil": {
+      "unit": "ml",
+      "total_quantity": 165,
+      "used_in_meals": [
+        "Monday Dinner: Chicken Tikka Masala",
+        "Tuesday Lunch: Classic Cheeseburger",
+        "Wednesday Breakfast: Beef Tacos",
+        "Wednesday Lunch: Beef Tacos",
+        "Thursday Breakfast: Chicken Fried Rice",
+        "Thursday Dinner: Chicken Fried Rice"
+      ]
+    },
+    "basmati rice": {
+      "unit": "grams",
+      "total_quantity": 300,
+      "used_in_meals": [
+        "Monday Dinner: Chicken Tikka Masala"
+      ]
+    },
+    "fresh cilantro": {
+      "unit": "grams",
+      "total_quantity": 15,
+      "used_in_meals": [
+        "Monday Dinner: Chicken Tikka Masala"
+      ]
+    },
+    "brown sugar": {
+      "unit": "grams",
+      "total_quantity": 1500,
+      "used_in_meals": [
+        "Tuesday Breakfast: Chocolate Chip Cookies",
+        "Friday Breakfast: Chocolate Chip Cookies",
+        "Friday Lunch: Chocolate Chip Cookies",
+        "Friday Dinner: Chocolate Chip Cookies",
+        "Saturday Breakfast: Chocolate Chip Cookies",
+        "Saturday Lunch: Chocolate Chip Cookies",
+        "Saturday Dinner: Chocolate Chip Cookies",
+        "Sunday Breakfast: Chocolate Chip Cookies",
+        "Sunday Lunch: Chocolate Chip Cookies",
+        "Sunday Dinner: Chocolate Chip Cookies"
+      ]
+    },
+    "granulated sugar": {
+      "unit": "grams",
+      "total_quantity": 1000,
+      "used_in_meals": [
+        "Tuesday Breakfast: Chocolate Chip Cookies",
+        "Friday Breakfast: Chocolate Chip Cookies",
+        "Friday Lunch: Chocolate Chip Cookies",
+        "Friday Dinner: Chocolate Chip Cookies",
+        "Saturday Breakfast: Chocolate Chip Cookies",
+        "Saturday Lunch: Chocolate Chip Cookies",
+        "Saturday Dinner: Chocolate Chip Cookies",
+        "Sunday Breakfast: Chocolate Chip Cookies",
+        "Sunday Lunch: Chocolate Chip Cookies",
+        "Sunday Dinner: Chocolate Chip Cookies"
+      ]
+    },
+    "baking soda": {
+      "unit": "grams",
+      "total_quantity": 50,
+      "used_in_meals": [
+        "Tuesday Breakfast: Chocolate Chip Cookies",
+        "Friday Breakfast: Chocolate Chip Cookies",
+        "Friday Lunch: Chocolate Chip Cookies",
+        "Friday Dinner: Chocolate Chip Cookies",
+        "Saturday Breakfast: Chocolate Chip Cookies",
+        "Saturday Lunch: Chocolate Chip Cookies",
+        "Saturday Dinner: Chocolate Chip Cookies",
+        "Sunday Breakfast: Chocolate Chip Cookies",
+        "Sunday Lunch: Chocolate Chip Cookies",
+        "Sunday Dinner: Chocolate Chip Cookies"
+      ]
+    },
+    "chocolate chips": {
+      "unit": "grams",
+      "total_quantity": 2000,
+      "used_in_meals": [
+        "Tuesday Breakfast: Chocolate Chip Cookies",
+        "Friday Breakfast: Chocolate Chip Cookies",
+        "Friday Lunch: Chocolate Chip Cookies",
+        "Friday Dinner: Chocolate Chip Cookies",
+        "Saturday Breakfast: Chocolate Chip Cookies",
+        "Saturday Lunch: Chocolate Chip Cookies",
+        "Saturday Dinner: Chocolate Chip Cookies",
+        "Sunday Breakfast: Chocolate Chip Cookies",
+        "Sunday Lunch: Chocolate Chip Cookies",
+        "Sunday Dinner: Chocolate Chip Cookies"
+      ]
+    },
+    "ground beef": {
+      "unit": "grams",
+      "total_quantity": 2100,
+      "used_in_meals": [
+        "Tuesday Lunch: Classic Cheeseburger",
+        "Tuesday Dinner: Spaghetti Bolognese",
+        "Wednesday Breakfast: Beef Tacos",
+        "Wednesday Lunch: Beef Tacos"
+      ]
+    },
+    "hamburger buns": {
+      "unit": "pieces",
+      "total_quantity": 4,
+      "used_in_meals": [
+        "Tuesday Lunch: Classic Cheeseburger"
+      ]
+    },
+    "cheddar cheese": {
+      "unit": "grams",
+      "total_quantity": 420,
+      "used_in_meals": [
+        "Tuesday Lunch: Classic Cheeseburger",
+        "Wednesday Breakfast: Beef Tacos",
+        "Wednesday Lunch: Beef Tacos"
+      ]
+    },
+    "lettuce": {
+      "unit": "grams",
+      "total_quantity": 280,
+      "used_in_meals": [
+        "Tuesday Lunch: Classic Cheeseburger",
+        "Wednesday Breakfast: Beef Tacos",
+        "Wednesday Lunch: Beef Tacos"
+      ]
+    },
+    "tomato": {
+      "unit": "grams",
+      "total_quantity": 200,
+      "used_in_meals": [
+        "Tuesday Lunch: Classic Cheeseburger"
+      ]
+    },
+    "mayonnaise": {
+      "unit": "ml",
+      "total_quantity": 140,
+      "used_in_meals": [
+        "Tuesday Lunch: Classic Cheeseburger",
+        "Wednesday Dinner: Caesar Salad"
+      ]
+    },
+    "ketchup": {
+      "unit": "ml",
+      "total_quantity": 60,
+      "used_in_meals": [
+        "Tuesday Lunch: Classic Cheeseburger"
+      ]
+    },
+    "spaghetti": {
+      "unit": "grams",
+      "total_quantity": 400,
+      "used_in_meals": [
+        "Tuesday Dinner: Spaghetti Bolognese"
+      ]
+    },
+    "carrot": {
+      "unit": "grams",
+      "total_quantity": 260,
+      "used_in_meals": [
+        "Tuesday Dinner: Spaghetti Bolognese",
+        "Thursday Breakfast: Chicken Fried Rice",
+        "Thursday Dinner: Chicken Fried Rice"
+      ]
+    },
+    "tomato paste": {
+      "unit": "grams",
+      "total_quantity": 30,
+      "used_in_meals": [
+        "Tuesday Dinner: Spaghetti Bolognese"
+      ]
+    },
+    "red wine": {
+      "unit": "ml",
+      "total_quantity": 125,
+      "used_in_meals": [
+        "Tuesday Dinner: Spaghetti Bolognese"
+      ]
+    },
+    "beef stock": {
+      "unit": "ml",
+      "total_quantity": 250,
+      "used_in_meals": [
+        "Tuesday Dinner: Spaghetti Bolognese"
+      ]
+    },
+    "parmesan cheese": {
+      "unit": "grams",
+      "total_quantity": 150,
+      "used_in_meals": [
+        "Tuesday Dinner: Spaghetti Bolognese",
+        "Wednesday Dinner: Caesar Salad"
+      ]
+    },
+    "fresh basil": {
+      "unit": "grams",
+      "total_quantity": 25,
+      "used_in_meals": [
+        "Tuesday Dinner: Spaghetti Bolognese",
+        "Thursday Lunch: Margherita Pizza"
+      ]
+    },
+    "taco shells": {
+      "unit": "pieces",
+      "total_quantity": 16,
+      "used_in_meals": [
+        "Wednesday Breakfast: Beef Tacos",
+        "Wednesday Lunch: Beef Tacos"
+      ]
+    },
+    "chili powder": {
+      "unit": "grams",
+      "total_quantity": 16,
+      "used_in_meals": [
+        "Wednesday Breakfast: Beef Tacos",
+        "Wednesday Lunch: Beef Tacos"
+      ]
+    },
+    "tomatoes": {
+      "unit": "grams",
+      "total_quantity": 400,
+      "used_in_meals": [
+        "Wednesday Breakfast: Beef Tacos",
+        "Wednesday Lunch: Beef Tacos"
+      ]
+    },
+    "sour cream": {
+      "unit": "ml",
+      "total_quantity": 240,
+      "used_in_meals": [
+        "Wednesday Breakfast: Beef Tacos",
+        "Wednesday Lunch: Beef Tacos"
+      ]
+    },
+    "romaine lettuce": {
+      "unit": "grams",
+      "total_quantity": 300,
+      "used_in_meals": [
+        "Wednesday Dinner: Caesar Salad"
+      ]
+    },
+    "bread": {
+      "unit": "grams",
+      "total_quantity": 100,
+      "used_in_meals": [
+        "Wednesday Dinner: Caesar Salad"
+      ]
+    },
+    "lemon juice": {
+      "unit": "ml",
+      "total_quantity": 30,
+      "used_in_meals": [
+        "Wednesday Dinner: Caesar Salad"
+      ]
+    },
+    "worcestershire sauce": {
+      "unit": "ml",
+      "total_quantity": 10,
+      "used_in_meals": [
+        "Wednesday Dinner: Caesar Salad"
+      ]
+    },
+    "anchovy paste": {
+      "unit": "grams",
+      "total_quantity": 5,
+      "used_in_meals": [
+        "Wednesday Dinner: Caesar Salad"
+      ]
+    },
+    "cooked rice": {
+      "unit": "grams",
+      "total_quantity": 1200,
+      "used_in_meals": [
+        "Thursday Breakfast: Chicken Fried Rice",
+        "Thursday Dinner: Chicken Fried Rice"
+      ]
+    },
+    "frozen peas": {
+      "unit": "grams",
+      "total_quantity": 200,
+      "used_in_meals": [
+        "Thursday Breakfast: Chicken Fried Rice",
+        "Thursday Dinner: Chicken Fried Rice"
+      ]
+    },
+    "green onions": {
+      "unit": "grams",
+      "total_quantity": 100,
+      "used_in_meals": [
+        "Thursday Breakfast: Chicken Fried Rice",
+        "Thursday Dinner: Chicken Fried Rice"
+      ]
+    },
+    "soy sauce": {
+      "unit": "ml",
+      "total_quantity": 90,
+      "used_in_meals": [
+        "Thursday Breakfast: Chicken Fried Rice",
+        "Thursday Dinner: Chicken Fried Rice"
+      ]
+    },
+    "sesame oil": {
+      "unit": "ml",
+      "total_quantity": 30,
+      "used_in_meals": [
+        "Thursday Breakfast: Chicken Fried Rice",
+        "Thursday Dinner: Chicken Fried Rice"
+      ]
+    },
+    "white pepper": {
+      "unit": "grams",
+      "total_quantity": 2,
+      "used_in_meals": [
+        "Thursday Breakfast: Chicken Fried Rice",
+        "Thursday Dinner: Chicken Fried Rice"
+      ]
+    },
+    "pizza dough": {
+      "unit": "grams",
+      "total_quantity": 250,
+      "used_in_meals": [
+        "Thursday Lunch: Margherita Pizza"
+      ]
+    },
+    "tomato sauce": {
+      "unit": "ml",
+      "total_quantity": 100,
+      "used_in_meals": [
+        "Thursday Lunch: Margherita Pizza"
+      ]
+    },
+    "mozzarella cheese": {
+      "unit": "grams",
+      "total_quantity": 125,
+      "used_in_meals": [
+        "Thursday Lunch: Margherita Pizza"
+      ]
+    }
+  },
+  "total_unique_ingredients": 67
+}
