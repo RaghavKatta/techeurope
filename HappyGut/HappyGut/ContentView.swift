@@ -9,15 +9,17 @@ import SwiftUI
 
 struct ContentView: View {
     @ObservedObject var model = Model()
-    
+    @State var selectedFood: Food? = nil
+    @Namespace var namespace
     var body: some View {
         ZStack {
             ZStack {
                 switch model.currentView {
                 case .home:
-                    TodayView(model: model) // Placeholder for HomeView
+                    TodayView(model: model, namespace: namespace) // Placeholder for HomeView
+                        
                 case .groceries:
-                    KartView()
+                    KartView(model: model) // Placeholder for KartView)
                 }
                 
                 
@@ -37,7 +39,7 @@ struct ContentView: View {
                 LogPainView()
             }
             .sheet(isPresented: $model.showLogFood) {
-                CameraView()
+                CameraView(model: model)
             }
             
             
@@ -98,9 +100,50 @@ struct ContentView: View {
             }
             .ignoresSafeArea()
         }
+      //  .disabled(model.selectedFood != nil)
+        //.brightness(model.selectedFood != nil ? -10 : 0)
         
+        .overlay {
+          
+                ZStack {
+                    if let _ = model.selectedFood {
+                        Rectangle()
+                            .ignoresSafeArea()
+                            .foregroundStyle(.black.opacity(0.5))
+                            .onTapGesture {
+                                if model.selectedFood != nil {
+                                    withAnimation(.smooth(duration: 0.3)) {
+                                        model.selectedFood = nil
+                                    }
+                                }
+                            }
+                    }
+                    
+                    VStack {
+                        Spacer()
+//                        
+//                        RoundedRectangle(cornerRadius: 25)
+//                            .frame(height: 500)
+//                            .overlay {
+                                if let selectedFood = model.selectedFood {
+                                    FoodRecap(food: selectedFood, namespace: namespace)
+                                        .transition(.offset(y: 600))
+                                }
+                         
+//                            }
+                        
+                        //  .transition(.slide)
+                    }
+                    .ignoresSafeArea()
+                    //.offset(y: model.selectedFood != nil ? 0 : 1100)
+                }
+            
+            
+        }
     }
+    
 }
+
 
 
 extension ContentView {
@@ -120,10 +163,17 @@ extension ContentView {
     
     @ViewBuilder func topBar() -> some View {
         HStack {
-            VStack {
-                Text("Happy Gut")
-                    .font(.title)
-                    .bold()
+            VStack(alignment: .leading) {
+                if model.isScrollingViewAtDefaultPosition {
+                    Text("Happy Gut")
+                        .font(.system(size: 30, weight: .bold, design: .rounded))
+                        .foregroundStyle(.secondary)
+                }
+
+                Text(model.currentView.title(view: model.currentView))
+                    .font(.system(size: 30, weight: .bold, design: .rounded))
+                    .foregroundStyle(.black)
+                    .contentTransition(.numericText())
                 
                 Spacer()
             }
@@ -131,12 +181,14 @@ extension ContentView {
             Spacer()
             
             VStack {
-                Badge(number: model.gutScore)
-                    .frame(width: model.isScrollingViewAtDefaultPosition ? 100 : 40)
+                Badge(showText: $model.isScrollingViewAtDefaultPosition, number: model.gutScore)
+                    .frame(width: model.isScrollingViewAtDefaultPosition ? 100 : 50)
                     .onTapGesture {
                         model.showGutScoreView.toggle()
                     }
                     .contentTransition(.numericText())
+                    .offset(y: model.isScrollingViewAtDefaultPosition ? 0 : -20)
+                
                 Spacer()
             }
         }

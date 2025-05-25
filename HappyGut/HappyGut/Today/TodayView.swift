@@ -40,6 +40,7 @@ struct TodayView: View {
     @ObservedObject var model: Model
     @State var showDetails: Bool = false
     @State private var isAtTop: Bool = true
+    var namespace: Namespace.ID
     
     var body: some View {
         GeometryReader { geometry in
@@ -70,7 +71,7 @@ struct TodayView: View {
                                         .onChange(of: geo.frame(in: .named("scroll")).minY) { _, newValue in
                                             // When at top with contentMargins(.top, 180), minY = 180
                                             // As you scroll down, minY decreases (179, 178, etc.)
-                                            let topMargin: CGFloat = 180
+                                            let topMargin: CGFloat = 140
                                             let threshold: CGFloat = 20
                                             let isNowAtTop = newValue >= (topMargin - threshold)
                                             //print("Top marker offset: \(newValue), topMargin: \(topMargin)")
@@ -85,27 +86,58 @@ struct TodayView: View {
                             )
                         
                         HStack {
-                            Button("Breakfast") {
-                                
-                            }
+                            Text("Lunch")
+                                .font(.system(size: 20, weight: .bold))
+                                .foregroundStyle(.secondary)
+                            
                             Spacer()
                         }
+                        .padding(.bottom, -10)
                         
-                        ForEach(model.todayFood) { food in
-                            FoodSuggestionRow(model: model, food: food)
+                        ForEach(model.lunchFood) { food in
+                            FoodSuggestionRow(model: model, food: food, isLunch: true, isDinner: false, namespace: namespace)
                                 .onTapGesture {
-                                    showDetails.toggle()
+                                    withAnimation(.smooth(duration: 0.3)) {
+                                        print("Selected food: \(food.name)")
+                                        model.selectedFood = food
+                                    }
                                 }
                         }
+                        
+                        
+                        HStack {
+                            Text("Dinner")
+                                .font(.system(size: 20, weight: .bold))
+                                .foregroundStyle(.secondary)
+                            
+                            Spacer()
+                        }
+                        .padding(.bottom, -10)
+                        .padding(.top, 10)
+                        ForEach(model.dinnerFood) { food in
+                            FoodSuggestionRow(model: model, food: food, isLunch: false, isDinner: true, namespace: namespace)
+                                .onTapGesture {
+                                    withAnimation(.smooth(duration: 0.3)) {
+                                        print("Selected food: \(food.name)")
+                                        model.selectedFood = food
+                                    }
+                                }
+                        }
+                        
+                        
+                        
+                        Rectangle()
+                            .foregroundStyle(.clear)
+                            .frame(height: 200)
                     }
                     .padding()
                 }
                 .coordinateSpace(name: "scroll")
-                .contentMargins(.top, 180)
+                .contentMargins(.top, 160)
                 .scrollIndicators(.hidden)
-                .sheet(isPresented: $showDetails) {
-                    
-                }
+//                .sheet(isPresented: $showDetails) {
+//                    
+//                }
             }
         }
     }

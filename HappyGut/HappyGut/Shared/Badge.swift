@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct Badge: View {
+    @Binding var showText: Bool
     var number: Int
     
     var badgeColor: Color {
@@ -27,16 +28,30 @@ struct Badge: View {
         ZStack {
             Circle()
                 .fill(badgeColor)
-
-            Text("\(number)")
-                .font(.system(size: 40, weight: .bold))
-                .foregroundColor(.white)
-                
+            
+            ResizableTextView(text: "\(number)")
+            
             CircleLabelView(text: "Gut Score →")
                 .foregroundStyle(badgeColor)
-            
+                .opacity(showText ? 1 : 0)
         }
-       
+        
+    }
+}
+
+struct ResizableTextView: View {
+    var text: String
+    var body: some View {
+        GeometryReader { geometry in
+            Text(text)
+                .font(.system(size: geometry.size.width * 0.45)) // Scale with width
+                .frame(width: geometry.size.width, height: geometry.size.height)
+                .minimumScaleFactor(0.1)
+                .lineLimit(1)
+                .bold()
+                .foregroundStyle(.white)
+                .multilineTextAlignment(.center)
+        }
     }
 }
 
@@ -71,10 +86,8 @@ struct CircleLabelView: View {
 
 #Preview {
     VStack(spacing: 20) {
-        Badge(number: 10)
+        Badge(showText: .constant(true), number: 10)
             .frame(height: 120)
 
-        Badge(number: 50)
-        Badge(number: 90)
     }
 }

@@ -43,6 +43,11 @@ struct Food: Identifiable {
 struct FoodSuggestionRow: View {
     @ObservedObject var model: Model
     var food: Food
+    var isLunch: Bool = false
+    var isDinner: Bool = false
+    
+    
+    var namespace: Namespace.ID
     
     var body: some View {
         Capsule()
@@ -50,22 +55,24 @@ struct FoodSuggestionRow: View {
             .foregroundStyle(.regularMaterial)
             .overlay {
                 HStack {
-                    Image(food.image)
-                        .resizable()
-                        .aspectRatio(contentMode: .fit)
-                        .frame(height: 100)
-                        .padding()
-                    
-                    
-                    Text(food.name)
-                        .font(.system(size: 20, weight: .bold))
-                        .foregroundStyle(.black)
-                        .frame(maxWidth: 100, alignment: .leading)
+                    ZStack {
+                        Image(food.image)
+                            .resizable()
+                            .aspectRatio(contentMode: .fit)
+                            .matchedGeometryEffect(id: food.image, in: namespace)
+                            .frame(height: 120)
+                    }
                     
                     Spacer()
-                    
                 }
             }
+            .overlay(content: {
+                Text(food.name)
+                    .font(.system(size: 20, weight: .bold))
+                    .foregroundStyle(.black)
+                    .frame(maxWidth: 100, alignment: .leading)
+                    .offset(x: -20)
+            })
             .overlay(alignment: .trailing) {
                 HStack {
                     Spacer()
@@ -84,7 +91,7 @@ struct FoodSuggestionRow: View {
                                 .foregroundStyle(food.isAdded ? .white : .black)
                         }
                         .onTapGesture {
-                            model.updateFood(food)
+                            model.updateFood(food, isLunch: isLunch, isDinner: isDinner)
                         }
                        
                 }
@@ -98,7 +105,12 @@ struct FoodSuggestionRow: View {
 
 #Preview {
     ZStack {
-        FoodSuggestionRow(model: Model(), food: Food(image: "oats", name: "Overnight Oats", description: "A sweet red fruit", ingredients: "Apple", scoreImpact: 5))
+        FoodSuggestionRow(model: Model(), food: Food(image: "oats", name: "Overnight Oats", description: "A sweet red fruit", ingredients: "Apple", scoreImpact: 5), namespace: Namespace().wrappedValue)
             .padding()
     }
+}
+
+
+#Preview {
+    ContentView()
 }

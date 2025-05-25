@@ -1,15 +1,22 @@
 import SwiftUI
 import Foundation
+import UIKit
 import AVFoundation
 import Photos
 
 struct CameraView: View {
+    @ObservedObject var model: Model
+    
     @StateObject private var cameraManager = CameraManager()
     @State private var showingAlert = false
     @State private var alertMessage = ""
     @State private var photoCaptured = false
     @State private var displayedImage: UIImage?
     @State private var imageCaption: String?
+    @State private var healthScore = 0.0
+    
+    @Environment(\.dismiss) private var dismiss
+    
     
     var body: some View {
         ZStack {
@@ -21,6 +28,8 @@ struct CameraView: View {
                     Image(uiImage: image)
                         .resizable()
                         .scaledToFill()
+                        .frame(width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height)
+                        .clipped()
                         .transition(.opacity)
                         .ignoresSafeArea()
                         .onTapGesture {
@@ -28,7 +37,6 @@ struct CameraView: View {
                                 displayedImage = nil
                             }
                         }
-                        .offset(y:  -150)
                 } else {
                     CameraPreview(session: cameraManager.session)
                         .ignoresSafeArea()
@@ -43,27 +51,30 @@ struct CameraView: View {
                 }
             }
             .overlay(alignment: .bottom) {
-                Circle()
-                    .stroke(Color.white.opacity(1), lineWidth: 2)
-                    .overlay {
-                        Button {
-                            cameraManager.capturePhoto()
-                            withAnimation {
-                                photoCaptured = true
+                if displayedImage == nil {
+                    Circle()
+                        .stroke(Color.white.opacity(1), lineWidth: 2)
+                        .overlay {
+                            Button {
+                                cameraManager.capturePhoto()
+                                withAnimation {
+                                    photoCaptured = true
+                                }
+                                
+                            } label: {
+                                Circle()
+                                    .foregroundStyle(.white)
+                                    .padding(4)
                             }
-                            
-                        } label: {
-                            Circle()
-                                .foregroundStyle(.white)
-                                .padding(4)
                         }
-                    }
-                    .frame(width: 80, height: 80)
+                        .frame(width: 80, height: 80)
+                }
             }
             .onReceive(NotificationCenter.default.publisher(for: .photoCaptured)) { _ in
                 withAnimation {
                     photoCaptured = true
                 }
+                
                 DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
                     withAnimation {
                         photoCaptured = false
@@ -76,30 +87,87 @@ struct CameraView: View {
                 }
 
                 Task {
-                    // HERE
+                    print("DEBUG: Starting upload task")
                     do {
-                        let caption = try await uploadImage(image)
-                        print(caption)
+                        print("DEBUG: Calling uploadImage")
+                        let (caption, score) = try await uploadImage(image)
+                        print("DEBUG: uploadImage returned caption: \(caption), healthScore: \(score)")
                         imageCaption = caption
+                        healthScore = score
                     } catch {
+                        print("DEBUG: uploadImage error: \(error)")
                         alertMessage = "Upload failed: \(error.localizedDescription)"
                         showingAlert = true
                     }
                 }
-
             }
             
             
             if displayedImage != nil {
+                let numHealthScore = Int(healthScore)
+                
                 VStack {
                     Spacer()
+                    
                     RoundedRectangle(cornerRadius: 20)
-                        .foregroundStyle(.white)
-                        .frame(height: 400)
+                        .foregroundStyle(.regularMaterial)
+                        .frame(height: 170)
                         .shadow(radius: 25)
+                        .overlay {
+                            if let imageCaption = imageCaption {
+                                VStack {
+                                    HStack {
+                                        Text(imageCaption.uppercased())
+                                            .font(.title2)
+                                            .bold()
+                                        
+                                        
+                                        Spacer()
+                                        
+//                                        Circle()
+//                                            .frame(width: 40, height: 40)
+//                                            .overlay {
+                                        let color = {
+                                            if numHealthScore < 0 {
+                                                return Color.red
+                                            } else if self.healthScore == 0 {
+                                                return Color.yellow
+                                            } else {
+                                                return Color.green
+                                            }
+                                        }()
+                                                Text(String(format: "%.1f", healthScore))
+                                                    .foregroundStyle(color)
+                                                    .bold()
+                                                    .font(.system(size: 25))
+//                                            }
+                                    }
+                                    Spacer()
+                                    
+                                    Button {
+                                        dismiss()
+                                        model.gutScore += numHealthScore
+                                    } label: {
+                                        Capsule()
+                                            .foregroundStyle(.black)
+                                            .overlay {
+                                                Text("Confirm")
+                                                    .foregroundStyle(.white)
+                                            }
+                                    }
+                                    .frame(width: 200, height: 50)
+                                }
+                                .padding()
+                            } else {
+                                Text("Analyzing...")
+                                    .foregroundStyle(.secondary)
+                                    .padding()
+                            }
+                        }
                         
                 }
-                .ignoresSafeArea()
+                .padding()
+                .padding(.bottom, 50)
                 .transition(.move(edge: .bottom))
             }
         }
@@ -108,19 +176,27 @@ struct CameraView: View {
         }
     }
 
-    private func uploadImage(_ image: UIImage) async throws -> String {
+    private func uploadImage(_ image: UIImage) async throws -> (String, Double) {
+        print("DEBUG: uploadImage called")
+
         guard let url = URL(string: "\(baseUrl)/camera") else {
             throw URLError(.badURL)
         }
-        
+        print("DEBUG: URL is \(url)")
+
         var request = URLRequest(url: url)
+        print("DEBUG: URLRequest created: \(request)")
         request.httpMethod = "POST"
+
         let boundary = "Boundary-\(UUID().uuidString)"
+        print("DEBUG: Boundary: \(boundary)")
         request.setValue("multipart/form-data; boundary=\(boundary)", forHTTPHeaderField: "Content-Type")
 
         guard let imageData = image.jpegData(compressionQuality: 0.8) else {
+            print("DEBUG: Image compression failed")
             throw NSError(domain: "Upload", code: 0, userInfo: [NSLocalizedDescriptionKey: "Image compression failed"])
         }
+        print("DEBUG: Image data size: \(imageData.count) bytes")
 
         var body = Data()
         let filename = "upload.jpg"
@@ -132,25 +208,32 @@ struct CameraView: View {
         body.append("\r\n".data(using: .utf8)!)
         body.append("--\(boundary)--\r\n".data(using: .utf8)!)
         request.httpBody = body
+        print("DEBUG: HTTP body size: \(body.count) bytes")
 
         let (data, response) = try await URLSession.shared.data(for: request)
-        // Parse HTTP response and JSON
+        print("DEBUG: Received response, status code: \((response as? HTTPURLResponse)?.statusCode ?? -1)")
+
         guard let httpResponse = response as? HTTPURLResponse else {
             throw NSError(domain: "Upload", code: 0, userInfo: [NSLocalizedDescriptionKey: "Invalid response"])
         }
         if !(200...299).contains(httpResponse.statusCode) {
-            // Try decode error message
             if let json = try? JSONSerialization.jsonObject(with: data) as? [String:Any],
                let errorMsg = json["error"] as? String {
                 throw NSError(domain: "Upload", code: httpResponse.statusCode, userInfo: [NSLocalizedDescriptionKey: errorMsg])
             }
             throw NSError(domain: "Upload", code: httpResponse.statusCode, userInfo: [NSLocalizedDescriptionKey: "Server error"])
         }
-        // Decode caption
+
         let json = try JSONSerialization.jsonObject(with: data) as? [String:Any]
-        if let caption = json?["caption"] as? String {
-            return caption
+        print("DEBUG: Parsed JSON response: \(json ?? [:])")
+
+        if let captionDict = json?["caption"] as? [String: Any],
+           let detectedFood = captionDict["detected_food"] as? String,
+           let healthScoreValue = captionDict["health_score"] as? Double {
+            print("DEBUG: Returning caption: \(detectedFood), healthScore: \(healthScoreValue)")
+            return (detectedFood, healthScoreValue)
         } else {
+            print("DEBUG: JSON structure invalid: \(json ?? [:])")
             throw NSError(domain: "Upload", code: 0, userInfo: [NSLocalizedDescriptionKey: "Invalid JSON"])
         }
     }
@@ -317,7 +400,7 @@ extension CameraManager: AVCapturePhotoCaptureDelegate {
 
 
 #Preview {
-    CameraView()
+    CameraView(model: Model())
 }
 
 extension Notification.Name {

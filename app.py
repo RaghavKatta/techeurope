@@ -174,37 +174,103 @@ def index():
         profile=profile
     )
     
+def analyze_food_from_caption(caption, api_key=None):
+    """
+    Analyze food from caption using OpenAI and return structured info.
+
+    Args:
+        caption (str): The image caption describing the food
+        api_key (str): OpenAI API key (optional)
+
+    Returns:
+        dict: Contains food analysis including health_score
+    """
     
+    if not api_key:
+        api_key = os.getenv('OPENAI_API_KEY')
+    if not api_key:
+        return {"error": "OpenAI API key not found"}
+
+    client = openai.OpenAI(api_key=api_key)
+
+    prompt = f"""
+    Analyze this food description and extract the ingredients with estimated quantities:
+
+    Food: "{caption}"
+
+    Please respond in JSON format:
+    {{
+        "detected_food": "name of the main dish",
+        "ingredients": [
+            {{"name": "ingredient1", "quantity_grams": 100}},
+            {{"name": "ingredient2", "quantity_grams": 50}}
+        ],
+        "total_calories": 400,
+        "inflammation_level": "low/medium/high",
+        "health_score": 3  # -3 (very unhealthy) to +3 (very healthy)
+    }}
+
+    Give a rough estimate based on ingredient quality, calories, and inflammation potential.
+    """
+
+    try:
+        response = client.chat.completions.create(
+            model="gpt-3.5-turbo",
+            messages=[
+                {"role": "user", "content": prompt}
+            ],
+            temperature=0.3,
+            max_tokens=500
+        )
+
+        content = response.choices[0].message.content.strip()
+
+        try:
+            start = content.find('{')
+            end = content.rfind('}') + 1
+            if start != -1 and end != 0:
+                json_str = content[start:end]
+                result = json.loads(json_str)
+                return result
+            else:
+                return {"error": "Could not parse JSON from response", "raw_response": content}
+        except json.JSONDecodeError:
+            return {"error": "Invalid JSON in response", "raw_response": content}
+
+    except Exception as e:
+        return {"error": f"OpenAI API error: {str(e)}"}
+   
 @app.route('/camera', methods=['POST'])
 def camera():
-    print("DEBUG: Entering /camera route", flush=True)
+    # print("DEBUG: Entering /camera route", flush=True)
     # Check if the post request has the file part
     if 'image' not in request.files:
-        print("DEBUG: No 'image' file part in request", flush=True)
+        # print("DEBUG: No 'image' file part in request", flush=True)
         return jsonify({'error': 'No file part in the request'}), 400
 
     file = request.files['image']
 
     # If the user does not select a file, the browser submits an empty file without a filename.
     if file.filename == '':
-        print("DEBUG: No selected file", flush=True)
+        # print("DEBUG: No selected file", flush=True)
         return jsonify({'error': 'No selected file'}), 400
 
     if file and allowed_file(file.filename):
-        print(f"DEBUG: File found and allowed: {file.filename}", flush=True)
+        # print(f"DEBUG: File found and allowed: {file.filename}", flush=True)
         filename = secure_filename(file.filename)
         save_path = os.path.join(app.config['UPLOAD_FOLDER'], filename)
         try:
             file.save(save_path)
-            print(f"DEBUG: File saved successfully to {save_path}", flush=True)
+            # print(f"DEBUG: File saved successfully to {save_path}", flush=True)
             caption = analyze_image(save_path)
-            print(f"DEBUG: Image analyzed, caption: {caption}", flush=True)
+            # print(f"DEBUG: Image analyzed, caption: {caption}", flush=True)
+            caption = analyze_food_from_caption(caption)
             return jsonify({'caption': caption})
         except Exception as e:
-            print(f"DEBUG: Error saving file or analyzing image: {e}", flush=True)
+            # print(f"DEBUG: Error saving file or analyzing image: {e}", flush=True)
             return jsonify({'error': str(e)}), 500
     else:
-        print("DEBUG: File not allowed or no file provided", flush=True)
+        # print("DEBUG: File not allowed or no file provided", flush=True)
         return jsonify({'error': 'File type not allowed'}), 400
 
 @app.route('/recommendations/<int:entry_id>')

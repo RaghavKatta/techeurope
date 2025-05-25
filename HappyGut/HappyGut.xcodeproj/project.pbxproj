@@ -19,6 +19,7 @@
 		793EF7E42DE26FC900242B18 /* LogPainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 793EF7E32DE26FC600242B18 /* LogPainView.swift */; };
 		793EF7EC2DE28BEC00242B18 /* KartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 793EF7EB2DE28BE900242B18 /* KartView.swift */; };
 		793EF7EE2DE2959E00242B18 /* profileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 793EF7ED2DE2959B00242B18 /* profileView.swift */; };
+		793EF7F82DE31E1900242B18 /* FoodRecap.swift in Sources */ = {isa = PBXBuildFile; fileRef = 793EF7F72DE31E0D00242B18 /* FoodRecap.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,6 +36,7 @@
 		793EF7E92DE2740E00242B18 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		793EF7EB2DE28BE900242B18 /* KartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KartView.swift; sourceTree = "<group>"; };
 		793EF7ED2DE2959B00242B18 /* profileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = profileView.swift; sourceTree = "<group>"; };
+		793EF7F72DE31E0D00242B18 /* FoodRecap.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodRecap.swift; sourceTree = "<group>"; };
 		7965DC8C2DE2232000BBF21A /* HappyGut.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HappyGut.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -82,6 +84,7 @@
 			isa = PBXGroup;
 			children = (
 				793EF7D92DE2471500242B18 /* Row.swift */,
+				793EF7F72DE31E0D00242B18 /* FoodRecap.swift */,
 				793EF7DB2DE24F2E00242B18 /* TodayView.swift */,
 			);
 			path = Today;
@@ -218,6 +221,7 @@
 				793EF7EE2DE2959E00242B18 /* profileView.swift in Sources */,
 				793EF7DC2DE24FD700242B18 /* TodayView.swift in Sources */,
 				793EF7D52DE23FF000242B18 /* TabBar.swift in Sources */,
+				793EF7F82DE31E1900242B18 /* FoodRecap.swift in Sources */,
 				793EF7E42DE26FC900242B18 /* LogPainView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
