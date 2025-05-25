@@ -36,6 +36,8 @@ GutTrack is a mobile app that lets users **log their meals and track pain**, the
 
 Over time, GutTrack adapts to you. It gets smarter with every meal and every pain log—learning what your body tolerates and what it doesn’t.
 
+![image](https://github.com/user-attachments/assets/1003fa0b-df47-409c-837c-0dab2cc7d8ef)
+
 ---
 
 ## How It Works
@@ -46,8 +48,6 @@ Over time, GutTrack adapts to you. It gets smarter with every meal and every pai
 4. **Log how you feel** – Bloating, fatigue, pain—we track it all.
 5. **GutTrack learns** – Future meals are scored based on your data.
 6. **Store suggestions** – Want better ingredients? We surface stores near you where you can shop smarter.
-
-![image](https://github.com/user-attachments/assets/1003fa0b-df47-409c-837c-0dab2cc7d8ef)
 
 ---
 
