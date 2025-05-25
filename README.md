@@ -1,8 +1,6 @@
 # GutTrack 🥗  
 **Stop guessing. Start healing.**
 
-![image](https://github.com/user-attachments/assets/4797268a-da83-4175-a24f-e0fb75afe307)
-
 ---
 
 ## Why This Matters
@@ -18,6 +16,8 @@ He’s not alone.
 Millions of people are suffering, and the tools they have—if any—aren’t built to connect the dots between what they eat and how they feel.
 
 That’s why we built **GutTrack**.
+
+![image](https://github.com/user-attachments/assets/4797268a-da83-4175-a24f-e0fb75afe307)
 
 ---
 
