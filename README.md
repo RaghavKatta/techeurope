@@ -45,6 +45,8 @@ Over time, GutTrack adapts to you. It gets smarter with every meal and every pai
 5. **GutTrack learns** – Future meals are scored based on your data.
 6. **Store suggestions** – Want better ingredients? We surface stores near you where you can shop smarter.
 
+![image](https://github.com/user-attachments/assets/1003fa0b-df47-409c-837c-0dab2cc7d8ef)
+
 ---
 
 ## What Makes It Different
@@ -57,7 +59,11 @@ Unlike calorie or macro trackers, **we don’t just track what goes in**—we co
 - References real **clinical inflammation data**  
 - Makes it actionable with **location-based store suggestions**
 
+![image](https://github.com/user-attachments/assets/4797268a-da83-4175-a24f-e0fb75afe307)
+
 ---
+![image](https://github.com/user-attachments/assets/9ce9eddb-7885-493c-b318-c2d88af425f0)
+
 
 ## Example
 
@@ -65,6 +71,8 @@ Unlike calorie or macro trackers, **we don’t just track what goes in**—we co
 **Score**: Inflammation +2.3  
 **Pain Logged**: 7/10  
 **Response**: “You’ve had consistent flare-ups after dairy-heavy meals. Consider trying a tomato-based chicken dish without cream next time.”
+
+![image](https://github.com/user-attachments/assets/d7b7f633-043b-4e6a-a003-0a86e34ed526)
 
 ---
 
