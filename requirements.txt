@@ -1,0 +1,8 @@
+Flask
+requests
+openai
+python-dotenv
+Pillow
+torch
+transformers
+torchvision

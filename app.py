@@ -116,14 +116,18 @@ def profile_page():
 
 @app.route('/', methods=['GET', 'POST'])
 def index():
+    print("DEBUG: Entering index function", flush=True)
     global profile
     # (DEBUG) print to console so you can see the value
     print("🔍 profile at start of index():", profile, flush=True)
 
     if request.method == 'POST':
+        print("DEBUG: Request method is POST", flush=True)
         # If they forgot to set a profile, send them there first
         if profile is None:
+            print("DEBUG: Profile is None, redirecting to profile_page", flush=True)
             return redirect(url_for('profile_page'))
+        print("DEBUG: Profile is set.", flush=True)
 
         # Build the new entry
         entry = {
@@ -138,19 +142,24 @@ def index():
             'image':     None,
             'caption':   None
         }
+        print(f"DEBUG: Built new entry: {entry}", flush=True)
 
         # Handle image upload + caption
         file = request.files.get('image')
         if file and allowed_file(file.filename):
+            print("DEBUG: Image file found.", flush=True)
             filename = secure_filename(file.filename)
             save_path = os.path.join(app.config['UPLOAD_FOLDER'], filename)
             file.save(save_path)
             entry['image'] = filename
             entry['caption'] = analyze_image(save_path)
+            print(f"DEBUG: Image saved to {save_path}, caption: {entry['caption']}", flush=True)
 
         entries.append(entry)
+        print(f"DEBUG: Appended entry to entries. Current entries count: {len(entries)}", flush=True)
 
         # Pass the already‐set profile into the thanks page
+        print("DEBUG: Rendering thanks.html", flush=True)
         return render_template(
             'thanks.html',
             entry=entry,
@@ -158,11 +167,45 @@ def index():
         )
 
     # On GET, just show the logger and any past entries
+    print("DEBUG: Request method is GET, rendering index.html", flush=True)
     return render_template(
         'index.html',
         entries=entries,
         profile=profile
     )
+    
+    
+@app.route('/camera', methods=['POST'])
+def camera():
+    print("DEBUG: Entering /camera route", flush=True)
+    # Check if the post request has the file part
+    if 'image' not in request.files:
+        print("DEBUG: No 'image' file part in request", flush=True)
+        return jsonify({'error': 'No file part in the request'}), 400
+
+    file = request.files['image']
+
+    # If the user does not select a file, the browser submits an empty file without a filename.
+    if file.filename == '':
+        print("DEBUG: No selected file", flush=True)
+        return jsonify({'error': 'No selected file'}), 400
+
+    if file and allowed_file(file.filename):
+        print(f"DEBUG: File found and allowed: {file.filename}", flush=True)
+        filename = secure_filename(file.filename)
+        save_path = os.path.join(app.config['UPLOAD_FOLDER'], filename)
+        try:
+            file.save(save_path)
+            print(f"DEBUG: File saved successfully to {save_path}", flush=True)
+            caption = analyze_image(save_path)
+            print(f"DEBUG: Image analyzed, caption: {caption}", flush=True)
+            return jsonify({'caption': caption})
+        except Exception as e:
+            print(f"DEBUG: Error saving file or analyzing image: {e}", flush=True)
+            return jsonify({'error': str(e)}), 500
+    else:
+        print("DEBUG: File not allowed or no file provided", flush=True)
+        return jsonify({'error': 'File type not allowed'}), 400
 
 @app.route('/recommendations/<int:entry_id>')
 def recommendations(entry_id):
@@ -290,12 +333,16 @@ def save_location():
     session['longitude'] = data.get('longitude')
     return '', 204          # empty body, HTTP 204 No Content
 
+#connected
 @app.route('/locations', methods=['GET'])
 def get_nearby_stores():
+    print("DEBUG: Entering get_nearby_stores function", flush=True)
     # —— 2) Nearby grocery stores via GPT-4.1 —— #
     lat = session.get('latitude')
     lon = session.get('longitude')
+    print(f"DEBUG: Retrieved lat: {lat}, lon: {lon} from session", flush=True)
     loc_str = f"{lat}, {lon}" if lat and lon else "unknown location"
+    print(f"DEBUG: Constructed loc_str: {loc_str}", flush=True)
     prompt_stores = f"""
 Based on the user's location ({loc_str}), list nearby grocery stores in Paris.
 Return ONLY a Python list assigned to a variable called stores.
@@ -308,6 +355,7 @@ stores = [
 ]
 """
 
+    print("DEBUG: Calling OpenAI API for stores...", flush=True)
     resp = client.chat.completions.create(
         model="gpt-4.1",
         messages=[
@@ -317,18 +365,23 @@ stores = [
         temperature=0
     )
     text = resp.choices[0].message.content.strip()
+    print(f"DEBUG: Received text from OpenAI: {text}", flush=True)
     # Safely exec the list literal
     namespace = {}
     try:
+        print("DEBUG: Attempting to exec OpenAI response...", flush=True)
         exec(text, {}, namespace)
         stores = namespace.get('stores', [])
-    except Exception:
+        print(f"DEBUG: Successfully parsed stores from exec. Stores: {stores}", flush=True)
+    except Exception as e:
+        print(f"DEBUG: Failed to exec OpenAI response: {e}", flush=True)
         stores = []
+        print("DEBUG: stores list is empty due to error.", flush=True)
 
-    print("🏬 Parsed stores:", stores, flush=True)
+    print("DEBUG: Returning jsonify(stores)", flush=True)
     return jsonify(stores)
 
 
 if __name__ == '__main__':
     # debug=True ensures you see the print(...) output
-    app.run(debug=True, use_reloader=False)
+    app.run(debug=True, use_reloader=False, host='0.0.0.0', port=8000)

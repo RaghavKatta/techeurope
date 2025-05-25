@@ -1,0 +1,435 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 77;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		793EF7D22DE23FF000242B18 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 793EF7CD2DE23FF000242B18 /* ContentView.swift */; };
+		793EF7D32DE23FF000242B18 /* HappyGutApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 793EF7CE2DE23FF000242B18 /* HappyGutApp.swift */; };
+		793EF7D42DE23FF000242B18 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 793EF7CF2DE23FF000242B18 /* Model.swift */; };
+		793EF7D52DE23FF000242B18 /* TabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 793EF7D02DE23FF000242B18 /* TabBar.swift */; };
+		793EF7D62DE23FF000242B18 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 793EF7C92DE23FF000242B18 /* Preview Assets.xcassets */; };
+		793EF7D72DE23FF000242B18 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 793EF7CC2DE23FF000242B18 /* Assets.xcassets */; };
+		793EF7DA2DE2471A00242B18 /* Row.swift in Sources */ = {isa = PBXBuildFile; fileRef = 793EF7D92DE2471500242B18 /* Row.swift */; };
+		793EF7DC2DE24FD700242B18 /* TodayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 793EF7DB2DE24F2E00242B18 /* TodayView.swift */; };
+		793EF7E22DE2600700242B18 /* GutScore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 793EF7E12DE25FE400242B18 /* GutScore.swift */; };
+		793EF7E42DE26FC900242B18 /* LogPainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 793EF7E32DE26FC600242B18 /* LogPainView.swift */; };
+		793EF7EC2DE28BEC00242B18 /* KartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 793EF7EB2DE28BE900242B18 /* KartView.swift */; };
+		793EF7EE2DE2959E00242B18 /* profileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 793EF7ED2DE2959B00242B18 /* profileView.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		793EF7C92DE23FF000242B18 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		793EF7CC2DE23FF000242B18 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		793EF7CD2DE23FF000242B18 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		793EF7CE2DE23FF000242B18 /* HappyGutApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HappyGutApp.swift; sourceTree = "<group>"; };
+		793EF7CF2DE23FF000242B18 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
+		793EF7D02DE23FF000242B18 /* TabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBar.swift; sourceTree = "<group>"; };
+		793EF7D92DE2471500242B18 /* Row.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Row.swift; sourceTree = "<group>"; };
+		793EF7DB2DE24F2E00242B18 /* TodayView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayView.swift; sourceTree = "<group>"; };
+		793EF7E12DE25FE400242B18 /* GutScore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GutScore.swift; sourceTree = "<group>"; };
+		793EF7E32DE26FC600242B18 /* LogPainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogPainView.swift; sourceTree = "<group>"; };
+		793EF7E92DE2740E00242B18 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		793EF7EB2DE28BE900242B18 /* KartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KartView.swift; sourceTree = "<group>"; };
+		793EF7ED2DE2959B00242B18 /* profileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = profileView.swift; sourceTree = "<group>"; };
+		7965DC8C2DE2232000BBF21A /* HappyGut.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HappyGut.app; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFileSystemSynchronizedRootGroup section */
+		793EF7DD2DE257F100242B18 /* Shared */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = Shared;
+			sourceTree = "<group>";
+		};
+		793EF7E52DE2700600242B18 /* Capture */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = Capture;
+			sourceTree = "<group>";
+		};
+/* End PBXFileSystemSynchronizedRootGroup section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		7965DC892DE2232000BBF21A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		793EF7C82DE23FF000242B18 /* Log */ = {
+			isa = PBXGroup;
+			children = (
+				793EF7E52DE2700600242B18 /* Capture */,
+			);
+			path = Log;
+			sourceTree = "<group>";
+		};
+		793EF7CA2DE23FF000242B18 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				793EF7C92DE23FF000242B18 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		793EF7CB2DE23FF000242B18 /* Today */ = {
+			isa = PBXGroup;
+			children = (
+				793EF7D92DE2471500242B18 /* Row.swift */,
+				793EF7DB2DE24F2E00242B18 /* TodayView.swift */,
+			);
+			path = Today;
+			sourceTree = "<group>";
+		};
+		793EF7D12DE23FF000242B18 /* HappyGut */ = {
+			isa = PBXGroup;
+			children = (
+				793EF7E92DE2740E00242B18 /* Info.plist */,
+				793EF7CA2DE23FF000242B18 /* Preview Content */,
+				793EF7CC2DE23FF000242B18 /* Assets.xcassets */,
+				793EF7ED2DE2959B00242B18 /* profileView.swift */,
+				793EF7CF2DE23FF000242B18 /* Model.swift */,
+				793EF7CE2DE23FF000242B18 /* HappyGutApp.swift */,
+				793EF7CD2DE23FF000242B18 /* ContentView.swift */,
+				793EF7E12DE25FE400242B18 /* GutScore.swift */,
+				793EF7DD2DE257F100242B18 /* Shared */,
+				793EF7D02DE23FF000242B18 /* TabBar.swift */,
+				793EF7E32DE26FC600242B18 /* LogPainView.swift */,
+				793EF7EA2DE28BC000242B18 /* Kart */,
+				793EF7CB2DE23FF000242B18 /* Today */,
+				793EF7C82DE23FF000242B18 /* Log */,
+			);
+			path = HappyGut;
+			sourceTree = "<group>";
+		};
+		793EF7EA2DE28BC000242B18 /* Kart */ = {
+			isa = PBXGroup;
+			children = (
+				793EF7EB2DE28BE900242B18 /* KartView.swift */,
+			);
+			path = Kart;
+			sourceTree = "<group>";
+		};
+		7965DC832DE2232000BBF21A = {
+			isa = PBXGroup;
+			children = (
+				793EF7D12DE23FF000242B18 /* HappyGut */,
+				7965DC8D2DE2232000BBF21A /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		7965DC8D2DE2232000BBF21A /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				7965DC8C2DE2232000BBF21A /* HappyGut.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		7965DC8B2DE2232000BBF21A /* HappyGut */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7965DC9A2DE2232100BBF21A /* Build configuration list for PBXNativeTarget "HappyGut" */;
+			buildPhases = (
+				7965DC882DE2232000BBF21A /* Sources */,
+				7965DC892DE2232000BBF21A /* Frameworks */,
+				7965DC8A2DE2232000BBF21A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				793EF7DD2DE257F100242B18 /* Shared */,
+				793EF7E52DE2700600242B18 /* Capture */,
+			);
+			name = HappyGut;
+			packageProductDependencies = (
+			);
+			productName = HappyGut;
+			productReference = 7965DC8C2DE2232000BBF21A /* HappyGut.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		7965DC842DE2232000BBF21A /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1620;
+				LastUpgradeCheck = 1620;
+				TargetAttributes = {
+					7965DC8B2DE2232000BBF21A = {
+						CreatedOnToolsVersion = 16.2;
+					};
+				};
+			};
+			buildConfigurationList = 7965DC872DE2232000BBF21A /* Build configuration list for PBXProject "HappyGut" */;
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 7965DC832DE2232000BBF21A;
+			minimizedProjectReferenceProxies = 1;
+			preferredProjectObjectVersion = 77;
+			productRefGroup = 7965DC8D2DE2232000BBF21A /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				7965DC8B2DE2232000BBF21A /* HappyGut */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		7965DC8A2DE2232000BBF21A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				793EF7D62DE23FF000242B18 /* Preview Assets.xcassets in Resources */,
+				793EF7D72DE23FF000242B18 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		7965DC882DE2232000BBF21A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				793EF7D22DE23FF000242B18 /* ContentView.swift in Sources */,
+				793EF7E22DE2600700242B18 /* GutScore.swift in Sources */,
+				793EF7D32DE23FF000242B18 /* HappyGutApp.swift in Sources */,
+				793EF7EC2DE28BEC00242B18 /* KartView.swift in Sources */,
+				793EF7D42DE23FF000242B18 /* Model.swift in Sources */,
+				793EF7DA2DE2471A00242B18 /* Row.swift in Sources */,
+				793EF7EE2DE2959E00242B18 /* profileView.swift in Sources */,
+				793EF7DC2DE24FD700242B18 /* TodayView.swift in Sources */,
+				793EF7D52DE23FF000242B18 /* TabBar.swift in Sources */,
+				793EF7E42DE26FC900242B18 /* LogPainView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		7965DC982DE2232100BBF21A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.2;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		7965DC992DE2232100BBF21A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.2;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		7965DC9B2DE2232100BBF21A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"HappyGut/Preview Content\"";
+				DEVELOPMENT_TEAM = 9Q7ZM3BXCC;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = HappyGut/Info.plist;
+				INFOPLIST_KEY_NSCameraUsageDescription = Test;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = samuelevigano.HappyGut;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		7965DC9C2DE2232100BBF21A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"HappyGut/Preview Content\"";
+				DEVELOPMENT_TEAM = 9Q7ZM3BXCC;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = HappyGut/Info.plist;
+				INFOPLIST_KEY_NSCameraUsageDescription = Test;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = samuelevigano.HappyGut;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		7965DC872DE2232000BBF21A /* Build configuration list for PBXProject "HappyGut" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7965DC982DE2232100BBF21A /* Debug */,
+				7965DC992DE2232100BBF21A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7965DC9A2DE2232100BBF21A /* Build configuration list for PBXNativeTarget "HappyGut" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7965DC9B2DE2232100BBF21A /* Debug */,
+				7965DC9C2DE2232100BBF21A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 7965DC842DE2232000BBF21A /* Project object */;
+}
