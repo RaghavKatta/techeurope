@@ -79,6 +79,7 @@ struct CameraView: View {
                     // HERE
                     do {
                         let caption = try await uploadImage(image)
+                        print(caption)
                         imageCaption = caption
                     } catch {
                         alertMessage = "Upload failed: \(error.localizedDescription)"
