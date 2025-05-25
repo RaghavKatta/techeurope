@@ -1,6 +1,8 @@
 # GutTrack 🥗  
 **Stop guessing. Start healing.**
 
+![image](https://github.com/user-attachments/assets/4797268a-da83-4175-a24f-e0fb75afe307)
+
 ---
 
 ## Why This Matters
@@ -59,7 +61,7 @@ Unlike calorie or macro trackers, **we don’t just track what goes in**—we co
 - References real **clinical inflammation data**  
 - Makes it actionable with **location-based store suggestions**
 
-![image](https://github.com/user-attachments/assets/4797268a-da83-4175-a24f-e0fb75afe307)
+
 
 ---
 ![image](https://github.com/user-attachments/assets/9ce9eddb-7885-493c-b318-c2d88af425f0)
